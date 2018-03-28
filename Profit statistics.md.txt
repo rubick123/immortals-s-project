@@ -1,4 +1,11 @@
-﻿# immortals-s-project
+﻿<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+# immortals-s-project
  服装批发盈利统计
 **************
 业务
@@ -13,3 +20,5 @@
 7.对盈利总额进行分配和管理<br>
 #### [持续更新...]（https://github.com/rubick123/immortals-s-project）<br>
 #### 谢谢对我们服装盈利业务的信任和支持，期待您的合作！
+</body>
+</html>
