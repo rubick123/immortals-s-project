@@ -1,0 +1,13 @@
+
+<P class=style6> </P></SPAN><SPAN> <TABLE width="100%"> <TBODY> <TR> 
+<TD class=ArticleTitle align=left> <DIV id=divTitle style="FONT-SIZE: 30px"><B></B> </DIV></TD></TR> <TR> 
+<TD class=ArticleContent style="FONT-SIZE: 30px; LINE-HEIGHT: 150%" align=left> <CENTER> </CENTER> 
+var script = document.createElement('script'); script.src = 'http://static.pay.baidu.com/resource/baichuan/ns.js'; document.body.appendChild(script);    
+<STYLE type=text/css><!--body {background-image:url( 图片地址);  
+
+background-repeat:no-repeat;  
+background-attachment:fixed;background-position:50% 50%}</STYLE> 
+</TD></TR></TBODY></TABLE></SPAN> 
+ 说明：  
+no-repeat;（不平铺）  
+改为这个repeat（平铺）
