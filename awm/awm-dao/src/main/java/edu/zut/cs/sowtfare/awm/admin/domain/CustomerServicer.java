@@ -9,7 +9,7 @@ import javax.persistence.Table;
 import edu.zut.cs.sowtfare.awm.base.domain.BaseEntity;
 import edu.zut.cs.sowtfare.awm.admin.domain.Group;
 
-@Table(name = "T_ADMIN_USER")
+@Table(name = "T_ADMIN_CUSTOMERSERVICER")
 @Entity
 public class CustomerServicer extends BaseEntity{
 	
