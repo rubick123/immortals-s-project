@@ -37,8 +37,7 @@ public class AdminEntityGenerator extends GenericGenerator {
 	public void gen_customerservicer(Group g) {
 		for (int i = 0; i < 10; i++) {
 			CustomerServicer u = new CustomerServicer();
-			u.setUsername("username_" + i);
-			u.setPassword("password_" + i);
+			u.setCustomerservicername("customerservicername_" + i);
 			u.setGroup(g);
 			this.CustomerServicerManager.save(u);
 		}
