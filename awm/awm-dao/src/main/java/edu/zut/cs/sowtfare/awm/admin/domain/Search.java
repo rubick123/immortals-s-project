@@ -9,20 +9,18 @@ import javax.persistence.Table;
 import edu.zut.cs.sowtfare.awm.base.domain.BaseEntity;
 import edu.zut.cs.sowtfare.awm.admin.domain.Group;
 
-@Table(name = "T_ADMIN_CUSTOMERSERVICER")
+@Table(name = "T_Search")
 @Entity
-public class CustomerServicer extends BaseEntity{
+public class Search extends BaseEntity{
 	
 	/**
 	 * 
 	 */
 	private static final long serialVersionUID = -4376674977047164142L;
 
-	@Column(name = "CUSTONERSERVICERNAME")
-	String customerservicername;
+	@Column(name = "document")
+	String document;
 
-	@Column(name = "EMAIL")
-	String email;
 	
 	public Group getGroup() {
 		return group;
@@ -36,19 +34,11 @@ public class CustomerServicer extends BaseEntity{
 	@JoinColumn(name = "GROUP_ID")
 	Group group;
 
-	public String getCustomerservicername() {
-		return customerservicername;
+	public String getUsername() {
+		return document;
 	}
 
-	public void setCustomerservicername(String customerservicername) {
-		this.customerservicername = customerservicername;
-	}
-
-	public String getEmail() {
-		return email;
-	}
-
-	public void setEmail(String email) {
-		this.email = email;
+	public void setUsername(String document) {
+		this.document = document;
 	}
 }
