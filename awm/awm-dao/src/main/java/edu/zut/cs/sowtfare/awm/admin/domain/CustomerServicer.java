@@ -18,11 +18,8 @@ public class CustomerServicer extends BaseEntity{
 	 */
 	private static final long serialVersionUID = -4376674977047164142L;
 
-	@Column(name = "USERNAME")
-	String username;
-
-	@Column(name = "PASSWORD")
-	String password;
+	@Column(name = "CUSTONERSERVICERNAME")
+	String customerservicername;
 
 	@Column(name = "EMAIL")
 	String email;
@@ -39,20 +36,12 @@ public class CustomerServicer extends BaseEntity{
 	@JoinColumn(name = "GROUP_ID")
 	Group group;
 
-	public String getUsername() {
-		return username;
+	public String getCustomerservicername() {
+		return customerservicername;
 	}
 
-	public void setUsername(String username) {
-		this.username = username;
-	}
-
-	public String getPassword() {
-		return password;
-	}
-
-	public void setPassword(String password) {
-		this.password = password;
+	public void setCustomerservicername(String customerservicername) {
+		this.customerservicername = customerservicername;
 	}
 
 	public String getEmail() {
