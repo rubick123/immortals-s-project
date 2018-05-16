@@ -9,8 +9,8 @@ import org.springframework.test.context.ContextConfiguration;
 import edu.zut.cs.sowtfare.awm.base.BaseAbstractTestCase;
 import edu.zut.cs.sowtfare.awm.base.domain.BaseEntity;
 
-@ContextConfiguration(locations = { "classpath:/applicationContextTest-resources.xml",
-		"classpath:/applicationContext-dao.xml" })
+@ContextConfiguration(locations = { "classpath*:/applicationContextTest-resources.xml",
+		"classpath*:/applicationContext-dao.xml" })
 public class GenericDaoTestCase<PK extends Serializable, T extends BaseEntity, D extends GenericDao<T, PK>>
 		extends BaseAbstractTestCase {
 

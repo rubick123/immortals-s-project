@@ -14,5 +14,10 @@
             <artifactId>awm-dao</artifactId>
             <version>0.0.1-SNAPSHOT</version>
         </dependency>
-    </dependencies>
+        <dependency>
+        	<groupId>edu.zut.cs.sowtfare</groupId>
+        	<artifactId>awm-base</artifactId>
+        	<version>0.0.1-SNAPSHOT</version>
+        </dependency>
+  </dependencies>
 </project>

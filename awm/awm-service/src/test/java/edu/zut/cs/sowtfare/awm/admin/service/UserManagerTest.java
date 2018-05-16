@@ -11,10 +11,11 @@ import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 
 import edu.zut.cs.sowtfare.awm.admin.domain.User;
+import edu.zut.cs.sowtfare.awm.base.service.GenericGenerator;
 
-@RunWith(SpringJUnit4ClassRunner.class)
-@ContextConfiguration(classes = AdminServiceConfig.class)
-public class UserManagerTest {
+//@RunWith(SpringJUnit4ClassRunner.class)
+//@ContextConfiguration(classes = AdminServiceConfig.class)
+public class UserManagerTest extends GenericGenerator{
 
 	@Autowired
 	UserManager userManager;

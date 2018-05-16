@@ -10,12 +10,12 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 
-import edu.zut.cs.sowtfare.awm.admin.service.AdminServiceConfig;
 import edu.zut.cs.sowtfare.awm.admin.domain.CustomerServicer;
+import edu.zut.cs.sowtfare.awm.base.service.GenericGenerator;
 
-@RunWith(SpringJUnit4ClassRunner.class)
-@ContextConfiguration(classes = AdminServiceConfig.class)
-public class CustomerServicerManagerTest {
+//@RunWith(SpringJUnit4ClassRunner.class)
+//@ContextConfiguration(classes = AdminServiceConfig.class)
+public class CustomerServicerManagerTest extends GenericGenerator{
 	
 	@Autowired
 	CustomerServicerManager customerServicerManager;

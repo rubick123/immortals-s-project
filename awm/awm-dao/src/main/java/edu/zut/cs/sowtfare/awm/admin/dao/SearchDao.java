@@ -5,4 +5,5 @@ import edu.zut.cs.sowtfare.awm.base.dao.GenericDao;
 
 public interface SearchDao extends GenericDao<Search, Long> {
 
+	
 }

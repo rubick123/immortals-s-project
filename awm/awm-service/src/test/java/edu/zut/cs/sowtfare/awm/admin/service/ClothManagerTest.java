@@ -11,10 +11,11 @@ import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 
 import edu.zut.cs.sowtfare.awm.admin.domain.Cloth;
+import edu.zut.cs.sowtfare.awm.base.service.GenericGenerator;
 
-@RunWith(SpringJUnit4ClassRunner.class)
-@ContextConfiguration(classes = AdminServiceConfig.class)
-public class ClothManagerTest {
+//@RunWith(SpringJUnit4ClassRunner.class)
+//@ContextConfiguration(classes = AdminServiceConfig.class)
+public class ClothManagerTest extends GenericGenerator{
 
 	@Autowired
 	ClothManager clothManager;

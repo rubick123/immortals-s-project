@@ -14,7 +14,7 @@ public class CustomerServiceManagerImpl extends GenericManagerImpl<CustomerServi
 	CustomerServicerDao customerServicerDao;
 	
 	@Autowired
-	public void CustomerServicerDao(CustomerServicerDao customerServicerDao) {
+	public void setCustomerServicerDao(CustomerServicerDao customerServicerDao) {
 		this.customerServicerDao = customerServicerDao;
 		this.dao = this.customerServicerDao;
 	}
