@@ -4,21 +4,23 @@ import org.junit.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 
 import edu.zut.cs.sowtfare.awm.admin.domain.Group;
-import edu.zut.cs.sowtfare.awm.admin.domain.CustomerServicer;
+import edu.zut.cs.sowtfare.awm.admin.domain.User;
 import edu.zut.cs.sowtfare.awm.base.service.GenericGenerator;
 
 public class AdminEntityGenerator extends GenericGenerator {
-
+/*
 	@Autowired
 	GroupManager groupManager;
 
 	@Autowired
-	CustomerServicerManager CustomerServicerManager;
+	//CustomerServicerManager CustomerServicerManager;
+	UserManager userManager;
 
 	@Autowired
 	RoleManager roleManager;
 
 	@Test
+	/*
 	public void gen_group() {
 		for (int i = 0; i < 10; i++) {
 			Group g = new Group();
@@ -43,5 +45,12 @@ public class AdminEntityGenerator extends GenericGenerator {
 			this.CustomerServicerManager.save(u);
 		}
 	}
-
+	public void gen_user() {
+		for (int i = 0; i < 100; i++) {
+			User u = new User();
+			u.setUsername("xiaoming");
+			u.setEmail("123@163.com");
+			this.userManager.save(u);
+	}
+	}*/
 }

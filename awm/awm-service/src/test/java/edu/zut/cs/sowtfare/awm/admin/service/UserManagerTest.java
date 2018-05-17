@@ -19,6 +19,16 @@ public class UserManagerTest extends GenericGenerator{
 
 	@Autowired
 	UserManager userManager;
+	
+	@Test
+	public void gen_user() {
+		for (int i = 0; i < 100; i++) {
+			User u = new User();
+			u.setUsername("xiaoming");
+			u.setEmail("123@163.com");
+			this.userManager.save(u);
+		}
+	}
 
 	@Test
 	public void testFindAll() {
@@ -30,9 +40,9 @@ public class UserManagerTest extends GenericGenerator{
 	public void testFindbyUsername() {
 		String username = "world";
 		User expected_user = new User();
-		// expected_user.setUsername(username);
+		 //expected_user.setUsername(username);
 		User user = this.userManager.findbyUsername(username);
-		// assertEquals(user.getUsername(), expected_user.getUsername());
+		 //assertEquals(user.getUsername(), expected_user.getUsername());
 		assertEquals(user, expected_user);
 	}
 
