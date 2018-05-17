@@ -11,10 +11,11 @@ import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 
 import edu.zut.cs.sowtfare.awm.admin.domain.Issue;
+import edu.zut.cs.sowtfare.awm.base.service.GenericGenerator;
 
 @RunWith(SpringJUnit4ClassRunner.class)
 @ContextConfiguration(classes = AdminServiceConfig.class)
-public class IssueMangerTest {
+public class IssueMangerTest extends GenericGenerator {
 
 	@Autowired
 	IssueManger IssueManger;
