@@ -10,6 +10,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 
+import edu.zut.cs.sowtfare.awm.admin.domain.CustomerServicer;
 import edu.zut.cs.sowtfare.awm.admin.domain.Search;
 import edu.zut.cs.sowtfare.awm.base.service.GenericGenerator;
 
@@ -17,6 +18,16 @@ public class SearchManagerTest extends GenericGenerator{
 
 	@Autowired
 	SearchManager searchmanager;
+	@Test
+	public void insert_Search()
+	{
+		for(int i=0;i<100;i++)
+		{
+			Search u = new Search();
+			u.setdocument("123");
+			this.searchmanager.save(u);
+		}
+	}
 	
 	@Test
 	public void testFindAll() {
@@ -28,9 +39,9 @@ public class SearchManagerTest extends GenericGenerator{
 	public void testFindbyCustomerServicername() {
 		String searchname = "world";
 		Search expected_search = new Search();
-		// expected_customerServicer.setCustomerServicername(CustomerServicername);
+		// expected_Search.setdocument(document);
 		Search search = this.searchmanager.findbySearchname(searchname);
-		// assertEquals(customerServicer.getCustomerServicername(), expected_customerServicer.CustomerServicername());
+		// assertEquals(Search.getdocument(), expected_Search.document());
 		assertEquals(search, expected_search);
 	}
 }

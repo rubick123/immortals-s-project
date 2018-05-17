@@ -34,11 +34,11 @@ public class Search extends BaseEntity{
 	@JoinColumn(name = "GROUP_ID")
 	Group group;
 
-	public String getUsername() {
+	public String getdocument() {
 		return document;
 	}
 
-	public void setUsername(String document) {
+	public void setdocument(String document) {
 		this.document = document;
 	}
 }
