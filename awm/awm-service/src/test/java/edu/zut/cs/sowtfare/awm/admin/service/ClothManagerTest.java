@@ -11,29 +11,48 @@ import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 
 import edu.zut.cs.sowtfare.awm.admin.domain.Cloth;
+
+import edu.zut.cs.sowtfare.awm.admin.domain.Group;
 import edu.zut.cs.sowtfare.awm.base.service.GenericGenerator;
 
 //@RunWith(SpringJUnit4ClassRunner.class)
 //@ContextConfiguration(classes = AdminServiceConfig.class)
 public class ClothManagerTest extends GenericGenerator{
 
-	@Autowired
-	ClothManager clothManager;
+		@Autowired
+		ClothManager clothManager;
+		
+		
+		@Test
+		public void insert_Cloth()
+		{
+			for(int i=0;i<100;i++)
+			{
+				Cloth u = new Cloth();
+				u.setClothname("zhq");
+				u.setColor("Green");
+				u.setClothsize(43);
+				
+				this.clothManager.save(u);
+			}
+		}
 
-	@Test
-	public void testFindAll() {
-		List<Cloth> all = this.clothManager.findAll();
-		assertEquals(all.size(), 100);
-	}
+		@Test
+		public void testFindAll() {
+			List<Cloth> all = this.clothManager.findAll();
+			assertEquals(all.size(), 100);
+		}
+		
+		@Test
+		public void testFindbyClothname() {
+			String Clothname = "world";
+			Cloth expected_cloth = new Cloth();
+			// expected_customerServicer.setCustomerServicername(CustomerServicername);
+			Cloth cloth= this.clothManager.findbyClothname(Clothname);
+			// assertEquals(customerServicer.getCustomerServicername(), expected_customerServicer.CustomerServicername());
+			assertEquals(cloth, expected_cloth);
+		}
 
-	@Test
-	public void testFindbyClothname() {
-		String clothname = "world";
-		Cloth expected_cloth = new Cloth();
-		// expected_cloth.setClothname(clothname);
-		Cloth cloth = this.clothManager.findbyClothname(clothname);
-		// assertEquals(cloth.getClothname(), expected_cloth.getClothname());
-		assertEquals(cloth, expected_cloth);
-	}
 
 }
+
