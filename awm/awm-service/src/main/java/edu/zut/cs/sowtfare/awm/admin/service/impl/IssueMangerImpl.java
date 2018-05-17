@@ -12,12 +12,12 @@ import edu.zut.cs.sowtfare.awm.base.service.impl.GenericManagerImpl;
 @Component
 public class IssueMangerImpl extends GenericManagerImpl<Issue, Long> implements IssueManger {
 
-	IssueManger IssueDao;
+	IssueDao IssueDao;
 
 	@Autowired
 	public void setIssueDao(IssueDao IssueDao) {
-		this.IssueDao = (IssueManger) IssueDao;
-		this.dao = (GenericDao<Issue, Long>) this.IssueDao;
+		this.IssueDao =  IssueDao;
+		this.dao =  this.IssueDao;
 	}
 
 	@Override

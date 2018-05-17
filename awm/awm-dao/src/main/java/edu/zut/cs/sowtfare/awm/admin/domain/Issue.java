@@ -14,21 +14,18 @@ import edu.zut.cs.sowtfare.awm.base.domain.BaseEntity;
 public class Issue extends BaseEntity {
 	
 	private static final long  serialVersionUID = -4376674977047164142L;
-	@Column(name="username")
-	String username;
+	@Column(name="Issuename")
+	String Issuename;
 	
-	@Column(name="password")
-	String password;
+	@Column(name="phone")
+	String phone;
 	
-	@Column(name="tel")
-	String tel;
-	
-	@Column(name="nickname")
-	String nickname;
+	@Column(name="newsname")
+	String newsname;
 	
 	
-	@Column(name="email")
-	String email;
+	@Column(name="Email")
+	String Email;
 	
 	@ManyToOne
 	@JoinColumn(name="GROUP_ID")
@@ -41,44 +38,42 @@ public class Issue extends BaseEntity {
 		this.group = group;
 	}
 	
-	public String getUsername() {
-		return username;
+	public String getIssuename() {
+		return Issuename;
 	}
 
-	public void setUsername(String username) {
-		this.username = username;
+	public void setIssuename(String username) {
+		this.Issuename = username;
 	}
 
-	public String getPassword() {
-		return password;
+
+	public String getphone() {
+		return phone;
 	}
 
-	public void setPassword(String password) {
-		this.password = password;
+	public void setphone(String phone) {
+		this.phone = phone;
 	}
 
-	public String getTel() {
-		return tel;
+	public String getnewsname() {
+		return newsname;
 	}
 
-	public void setTel(String tel) {
-		this.tel = tel;
-	}
-
-	public String getNickname() {
-		return nickname;
-	}
-
-	public void setNickname(String nickname) {
-		this.nickname = nickname;
+	public void setnewsname(String newsname) {
+		this.newsname = newsname;
 	}
 
 	public String getEmail() {
-		return email;
+		return Email;
 	}
 
-	public void setEmail(String email) {
-		this.email = email;
+	public void setEmail(String Email) {
+		this.Email = Email;
+	}
+
+	public void save(Issue u) {
+		// TODO Auto-generated method stub
+		
 	}
 
 }
