@@ -10,30 +10,27 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 
-import edu.zut.cs.sowtfare.awm.admin.domain.CustomerServicer;
+import edu.zut.cs.sowtfare.awm.admin.domain.Search;
 import edu.zut.cs.sowtfare.awm.base.service.GenericGenerator;
 
-//@RunWith(SpringJUnit4ClassRunner.class)
-//@ContextConfiguration(classes = AdminServiceConfig.class)
-public class CustomerServicerManagerTest extends GenericGenerator{
-	
+public class SearchManagerTest extends GenericGenerator{
+
 	@Autowired
-	CustomerServicerManager customerServicerManager;
+	SearchManager searchmanager;
 	
 	@Test
 	public void testFindAll() {
-		List<CustomerServicer> all = this.customerServicerManager.findAll();
+		List<Search> all = this.searchmanager.findAll();
 		assertEquals(all.size(), 100);
 	}
 	
 	@Test
 	public void testFindbyCustomerServicername() {
-		String CustomerServicername = "world";
-		CustomerServicer expected_customerServicer = new CustomerServicer();
+		String searchname = "world";
+		Search expected_search = new Search();
 		// expected_customerServicer.setCustomerServicername(CustomerServicername);
-		CustomerServicer customerServicer = this.customerServicerManager.findbyCustomerServicername(CustomerServicername);
+		Search search = this.searchmanager.findbySearchname(searchname);
 		// assertEquals(customerServicer.getCustomerServicername(), expected_customerServicer.CustomerServicername());
-		assertEquals(customerServicer, expected_customerServicer);
+		assertEquals(search, expected_search);
 	}
-
 }
