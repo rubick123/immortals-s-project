@@ -16,23 +16,23 @@ public class Cloth extends BaseEntity {
 	String clothname;
 	
 	@Column(name="clothnumber")
-	String clothnumber;
+    int clothnumber;
 	
 	@Column(name="clothsize")
-	String clothsize;
+	int clothsize;
 	
 	@Column(name="color")
 	String color;
 	
 	
 	@Column(name="price")
-	String price;
+	int price;
 	
 	@Column(name="season")
 	String season;
 	
 	@Column(name="num")
-	String num;
+	int num;
 	
 	
 	@ManyToOne
@@ -54,19 +54,19 @@ public class Cloth extends BaseEntity {
 		this.clothname = clothname;
 	}
 
-	public String getClothnumber() {
+	public int getClothnumber() {
 		return clothnumber;
 	}
 
-	public void setClothnumber(String clothnumber) {
+	public void setClothnumber(int clothnumber) {
 		this.clothnumber = clothnumber;
 	}
 
-	public String getClothsize() {
+	public int getClothsize() {
 		return clothsize;
 	}
 
-	public void setClothsize(String clothsize) {
+	public void setClothsize(int clothsize) {
 		this.clothsize = clothsize;
 	}
 
@@ -78,11 +78,11 @@ public class Cloth extends BaseEntity {
 		this.color = color;
 	}
 
-	public String getPrice() {
+	public int getPrice() {
 		return price;
 	}
 
-	public void setPrice(String price) {
+	public void setPrice(int price) {
 		this.price = price;
 	}
 
@@ -94,11 +94,11 @@ public class Cloth extends BaseEntity {
 		this.season = season;
 	}
 
-	public String getNum() {
+	public int getNum() {
 		return num;
 	}
 
-	public void setNum(String num) {
+	public void setNum(int num) {
 		this.num = num;
 	}
 

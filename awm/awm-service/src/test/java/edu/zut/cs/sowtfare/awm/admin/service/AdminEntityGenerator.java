@@ -41,9 +41,15 @@ public class AdminEntityGenerator extends GenericGenerator {
 
 	public void gen_user(Group g) {
 		for (int i = 0; i < 10; i++) {
+<<<<<<< HEAD
 			User u = new User();
 			u.setUsername("username_" + i);
 			u.setPassword("password_" + i);
+=======
+			CustomerServicer u = new CustomerServicer();
+			u.setCustomerservicername("fj");
+			u.setEmail("2545757723@qq.com");
+>>>>>>> 22269d3e73d271ec82733212d1f33b3ca0dd282f
 			u.setGroup(g);
 			this.userManager.save(u);
 		}
