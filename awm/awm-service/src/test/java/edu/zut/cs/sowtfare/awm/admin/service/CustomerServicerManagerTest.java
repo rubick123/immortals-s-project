@@ -21,6 +21,18 @@ public class CustomerServicerManagerTest extends GenericGenerator{
 	CustomerServicerManager customerServicerManager;
 	
 	@Test
+	public void insert_CustomerSevicer()
+	{
+		for(int i=0;i<100;i++)
+		{
+			CustomerServicer u = new CustomerServicer();
+			u.setCustomerservicername("fj");
+			u.setEmail("2545757723@qq.com");
+			this.customerServicerManager.save(u);
+		}
+	}
+	
+	@Test
 	public void testFindAll() {
 		List<CustomerServicer> all = this.customerServicerManager.findAll();
 		assertEquals(all.size(), 100);
