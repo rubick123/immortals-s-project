@@ -17,7 +17,7 @@ public class AdminEntityGenerator extends GenericGenerator {
 
 	@Autowired
 	RoleManager roleManager;
-
+/*
 	@Test
 	public void gen_group() {
 		for (int i = 0; i < 10; i++) {
@@ -40,6 +40,18 @@ public class AdminEntityGenerator extends GenericGenerator {
 			u.setCustomerservicername("fj");
 			u.setEmail("2545757723@qq.com");
 			u.setGroup(g);
+			this.CustomerServicerManager.save(u);
+		}
+	}*/
+	
+	@Test
+	public void insert_CustomerSevicer()
+	{
+		for(int i=0;i<100;i++)
+		{
+			CustomerServicer u = new CustomerServicer();
+			u.setCustomerservicername("fj");
+			u.setEmail("2545757723@qq.com");
 			this.CustomerServicerManager.save(u);
 		}
 	}
