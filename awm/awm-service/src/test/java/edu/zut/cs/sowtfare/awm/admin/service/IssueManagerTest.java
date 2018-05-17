@@ -1,4 +1,3 @@
-
 package edu.zut.cs.sowtfare.awm.admin.service;
 
 import static org.junit.Assert.assertEquals;
@@ -12,31 +11,29 @@ import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 
 import edu.zut.cs.sowtfare.awm.admin.domain.Issue;
-import edu.zut.cs.sowtfare.awm.admin.domain.Search;
-import edu.zut.cs.sowtfare.awm.admin.domain.Group;
 import edu.zut.cs.sowtfare.awm.base.service.GenericGenerator;
 
 //@RunWith(SpringJUnit4ClassRunner.class)
 //@ContextConfiguration(classes = AdminServiceConfig.class)
-public class  IssueManagerTest extends GenericGenerator{
+public class IssueManagerTest extends GenericGenerator{
 
-		@Autowired
-		IssueManger issueManager;
-     
+	@Autowired
+	IssueManager IssueManager;
 
-		@Test
-		public void testFindAll() {
-			List<Issue> all = this.issueManager.findAll();
-			assertEquals(all.size(), 100);
-		}
-		
-		@Test
-		public void testFindbyCustomerServicername() {
-			String Issuename = "world";
-			Issue expected_Issue = new Issue();
-			// expected_customerServicer.setCustomerServicername(CustomerServicername);
-			Issue Issue = this.issueManager.findbyUsername(Issuename);
-			// assertEquals(customerServicer.getCustomerServicername(), expected_customerServicer.CustomerServicername());
-			assertEquals(Issue, expected_Issue);
-		}
+	@Test
+	public void testFindAll() {
+		List<Issue> all = this.IssueManager.findAll();
+		assertEquals(all.size(), 100);
+	}
+
+	@Test
+	public void testFindbyIssuename() {
+		String issuename = "world";
+		Issue expected_issue = new Issue();
+		// expected_user.setUsername(username);
+		Issue Issue = this.IssueManager.findbyIssuename(issuename);
+		// assertEquals(user.getUsername(), expected_user.getUsername());
+		assertEquals(Issue, expected_issue);
+	}
+
 }
