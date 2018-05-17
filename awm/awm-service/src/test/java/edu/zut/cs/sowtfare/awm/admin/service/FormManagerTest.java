@@ -10,30 +10,30 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 
-import edu.zut.cs.sowtfare.awm.admin.domain.Issue;
+import edu.zut.cs.sowtfare.awm.admin.domain.Form;
 import edu.zut.cs.sowtfare.awm.base.service.GenericGenerator;
 
 //@RunWith(SpringJUnit4ClassRunner.class)
 //@ContextConfiguration(classes = AdminServiceConfig.class)
-public class IssueMangerTest extends GenericGenerator{
+public class FormManagerTest extends GenericGenerator{
 
 	@Autowired
-	IssueManger IssueManger;
+	FormManager FormManager;
 
 	@Test
 	public void testFindAll() {
-		List<Issue> all = this.IssueManger.findAll();
+		List<Form> all = this.FormManager.findAll();
 		assertEquals(all.size(), 100);
 	}
 
 	@Test
-	public void testFindbyUsername() {
-		String issuename = "world";
-		Issue expected_issue = new Issue();
+	public void testFindbyFormname() {
+		String username = "world";
+		Form expected_user = new Form();
 		// expected_user.setUsername(username);
-		Issue Issue = this.IssueManger.findbyUsername(issuename);
+		Form Form = this.FormManager.findbyFormname(username);
 		// assertEquals(user.getUsername(), expected_user.getUsername());
-		assertEquals(Issue, expected_issue);
+		assertEquals(Form, expected_user);
 	}
 
 }
