@@ -32,6 +32,8 @@ public class ClothManagerTest extends GenericGenerator{
 				u.setClothname("zhq");
 				u.setColor("Green");
 				u.setClothsize(43);
+				u.setPrice(100);
+				u.setClothnumber(250);
 				
 				this.clothManager.save(u);
 			}
