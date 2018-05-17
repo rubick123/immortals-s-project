@@ -15,23 +15,23 @@ import edu.zut.cs.sowtfare.awm.base.service.GenericGenerator;
 
 //@RunWith(SpringJUnit4ClassRunner.class)
 //@ContextConfiguration(classes = AdminServiceConfig.class)
-public class IssueMangerTest extends GenericGenerator{
+public class IssueManagerTest extends GenericGenerator{
 
 	@Autowired
-	IssueManger IssueManger;
+	IssueManager IssueManager;
 
 	@Test
 	public void testFindAll() {
-		List<Issue> all = this.IssueManger.findAll();
+		List<Issue> all = this.IssueManager.findAll();
 		assertEquals(all.size(), 100);
 	}
 
 	@Test
-	public void testFindbyUsername() {
+	public void testFindbyIssuename() {
 		String issuename = "world";
 		Issue expected_issue = new Issue();
 		// expected_user.setUsername(username);
-		Issue Issue = this.IssueManger.findbyUsername(issuename);
+		Issue Issue = this.IssueManager.findbyIssuename(issuename);
 		// assertEquals(user.getUsername(), expected_user.getUsername());
 		assertEquals(Issue, expected_issue);
 	}

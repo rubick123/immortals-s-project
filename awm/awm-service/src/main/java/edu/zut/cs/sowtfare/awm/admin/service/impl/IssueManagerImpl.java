@@ -5,23 +5,23 @@ import org.springframework.stereotype.Component;
 
 import edu.zut.cs.sowtfare.awm.admin.dao.IssueDao;
 import edu.zut.cs.sowtfare.awm.admin.domain.Issue;
-import edu.zut.cs.sowtfare.awm.admin.service.IssueManger;
+import edu.zut.cs.sowtfare.awm.admin.service.IssueManager;
 import edu.zut.cs.sowtfare.awm.base.dao.GenericDao;
 import edu.zut.cs.sowtfare.awm.base.service.impl.GenericManagerImpl;
 
 @Component
-public class IssueMangerImpl extends GenericManagerImpl<Issue, Long> implements IssueManger {
+public class IssueManagerImpl extends GenericManagerImpl<Issue, Long> implements IssueManager {
 
-	IssueManger IssueDao;
+	IssueDao IssueDao;
 
 	@Autowired
 	public void setIssueDao(IssueDao IssueDao) {
-		this.IssueDao = (IssueManger) IssueDao;
-		this.dao = (GenericDao<Issue, Long>) this.IssueDao;
+		this.IssueDao =  IssueDao;
+		this.dao =  this.IssueDao;
 	}
 
 	@Override
-	public Issue findbyUsername(String username) {
+	public Issue findbyIssuename(String username) {
 		// TODO Auto-generated method stub
 		return null;
 	}

@@ -1,10 +1,3 @@
-
-
-
-
-
-
-
 package edu.zut.cs.sowtfare.awm.admin.dao;
 
 import java.util.List;

@@ -11,7 +11,7 @@ import edu.zut.cs.sowtfare.awm.base.dao.DaoConfig;
 
 @RunWith(SpringJUnit4ClassRunner.class)
 @ContextConfiguration(classes = DaoConfig.class)
-class UserDaoTest {
+class CustomerServicerDaoTest {
 
 	@Autowired
 	CustomerServicerDao customerServicerDao;
