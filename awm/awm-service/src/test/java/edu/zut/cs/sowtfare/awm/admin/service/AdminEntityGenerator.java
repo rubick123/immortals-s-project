@@ -4,6 +4,9 @@ import org.junit.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 
 import edu.zut.cs.sowtfare.awm.admin.domain.Group;
+
+import edu.zut.cs.sowtfare.awm.admin.domain.User;
+
 import edu.zut.cs.sowtfare.awm.admin.domain.Issue;
 import edu.zut.cs.sowtfare.awm.admin.domain.User;
 import edu.zut.cs.sowtfare.awm.admin.domain.CustomerServicer;
@@ -15,14 +18,19 @@ public class AdminEntityGenerator extends GenericGenerator {
 	GroupManager groupManager;
 
 	@Autowired
+
 	UserManager userManager;
 
 	@Autowired
 	RoleManager roleManager;
+<<<<<<< HEAD
+/*
+=======
 	
 	@Autowired
 	IssueManger issueManager;
 
+>>>>>>> d76302f16e0c06ea009aaf266cf68e661dd67298
 	@Test
 	public void gen_group() {
 		for (int i = 0; i < 10; i++) {
@@ -34,26 +42,20 @@ public class AdminEntityGenerator extends GenericGenerator {
 				group.setName("group_" + i + "_" + j);
 				group.setParent(g);
 				g = this.groupManager.save(group);
-				this.gen_user(g);
 			}
 		}
 	}
 
-	public void gen_user(Group g) {
-		for (int i = 0; i < 10; i++) {
-<<<<<<< HEAD
+
+	public void gen_user() {
+		for (int i = 0; i < 100; i++) {
 			User u = new User();
-			u.setUsername("username_" + i);
-			u.setPassword("password_" + i);
-=======
-			CustomerServicer u = new CustomerServicer();
-			u.setCustomerservicername("fj");
-			u.setEmail("2545757723@qq.com");
->>>>>>> 22269d3e73d271ec82733212d1f33b3ca0dd282f
-			u.setGroup(g);
+			u.setUsername("xiaoming");
+			u.setEmail("123@163.com");
 			this.userManager.save(u);
-		}
 	}
+	}
+
 
 
 	@Test
@@ -80,6 +82,18 @@ public class AdminEntityGenerator extends GenericGenerator {
 			u.setGroup(g);
 			this.issueManager.save(u);
 		}
+	}*/
+	
+	@Test
+	public void insert_CustomerSevicer()
+	{
+		for(int i=0;i<100;i++)
+		{
+			CustomerServicer u = new CustomerServicer();
+			u.setCustomerservicername("fj");
+			u.setEmail("2545757723@qq.com");
+			this.CustomerServicerManager.save(u);
+		}
 	}
 	public void gen_Issue() {
 		for (int i = 0; i < 100; i++) {
@@ -91,4 +105,5 @@ public class AdminEntityGenerator extends GenericGenerator {
 	}
 	}
 	
+
 }
