@@ -28,11 +28,9 @@ public class Cloth extends BaseEntity {
 	@Column(name="price")
 	int price;
 	
-	@Column(name="season")
-	String season;
 	
-	@Column(name="num")
-	int num;
+	
+	
 	
 	
 	@ManyToOne
@@ -86,20 +84,5 @@ public class Cloth extends BaseEntity {
 		this.price = price;
 	}
 
-	public String getSeason() {
-		return season;
-	}
-
-	public void setSeason(String season) {
-		this.season = season;
-	}
-
-	public int getNum() {
-		return num;
-	}
-
-	public void setNum(int num) {
-		this.num = num;
-	}
-
+	
 }

@@ -9,18 +9,17 @@ import javax.persistence.Table;
 import edu.zut.cs.sowtfare.awm.base.domain.BaseEntity;
 import edu.zut.cs.sowtfare.awm.admin.domain.Group;
 
-@Table(name = "T_Search")
+@Table(name = "T_ADMIN_Importexportdata")
 @Entity
-public class Search extends BaseEntity{
+public class Importexportdata extends BaseEntity{
 	
 	/**
 	 * 
 	 */
 	private static final long serialVersionUID = -4376674977047164142L;
 
-	@Column(name = "document")
-	String document;
-
+	@Column(name = "NUMBER")
+	String number;
 	
 	public Group getGroup() {
 		return group;
@@ -34,11 +33,12 @@ public class Search extends BaseEntity{
 	@JoinColumn(name = "GROUP_ID")
 	Group group;
 
-	public String getdocument() {
-		return document;
+	public String getNumber() {
+		return number;
 	}
 
-	public void setdocument(String document) {
-		this.document = document;
+	public void setNumber(String number) {
+		this.number = number;
 	}
 }
+	
