@@ -1,18 +1,37 @@
 package edu.zut.cs.sowtfare.awm.admin.service;
 
+import java.util.ArrayList;
+import java.util.List;
+
+import org.junit.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 
 import edu.zut.cs.sowtfare.awm.admin.domain.ClothNumber;
-import edu.zut.cs.sowtfare.awm.base.service.GenericManagerTestCase;
+import edu.zut.cs.sowtfare.awm.base.service.GenericGenerator;
 
-public class ClothNumberManagerTest extends GenericManagerTestCase<Long, ClothNumber, ClothNumberManager> {
+//@RunWith(SpringJUnit4ClassRunner.class)
+//@ContextConfiguration(classes = AdminServiceConfig.class)
+public class ClothNumberManagerTest extends GenericGenerator{
 
-	public ClothNumberManagerTest(Class<ClothNumber> persistentClass) {
-		super(persistentClass);
-		// TODO Auto-generated constructor stub
-	}
-
-	GroupManager groupManager;
+	@Autowired
+	ClothNumberManager clothNumberManager;
 	
+	
+	
+	@Test
+	public void add()
+	{
+		List<ClothNumber> list=new ArrayList<>();
+		for(int i=0;i<100;i++) 
+		{
+			ClothNumber clothNumber=new ClothNumber();
+			clothNumber.setNum(""+i);
+			clothNumber.setColor("red");
+			clothNumber.setKind("shirt");
+			clothNumber.setSize("xxl");
+			list.add(clothNumber);
+		}
+		this.clothNumberManager.save(list);
+	}
 
 }
