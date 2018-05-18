@@ -24,7 +24,7 @@ public class UserManagerTest extends GenericGenerator{
 	public void gen_user() {
 		for (int i = 0; i < 100; i++) {
 			User u = new User();
-			u.setUsername("xiaoming");
+			u.setUsername("xixi");
 			u.setEmail("123@163.com");
 			this.userManager.save(u);
 		}

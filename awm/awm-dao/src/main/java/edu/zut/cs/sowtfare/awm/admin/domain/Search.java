@@ -7,7 +7,6 @@ import javax.persistence.ManyToOne;
 import javax.persistence.Table;
 
 import edu.zut.cs.sowtfare.awm.base.domain.BaseEntity;
-import edu.zut.cs.sowtfare.awm.admin.domain.Group;
 
 @Table(name = "T_Search")
 @Entity
@@ -22,23 +21,13 @@ public class Search extends BaseEntity{
 	String document;
 
 	
-	public Group getGroup() {
-		return group;
-	}
+	
 
-	public void setGroup(Group group) {
-		this.group = group;
-	}
-
-	@ManyToOne
-	@JoinColumn(name = "GROUP_ID")
-	Group group;
-
-	public String getUsername() {
+	public String getdocument() {
 		return document;
 	}
 
-	public void setUsername(String document) {
+	public void setdocument(String document) {
 		this.document = document;
 	}
 }

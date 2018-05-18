@@ -19,6 +19,30 @@ public class FormManagerTest extends GenericGenerator{
 
 	@Autowired
 	FormManager FormManager;
+	
+	@Test
+	public void Form()
+	{
+		for(int i=0;i<100;i++)
+		{
+			Form u=new Form();
+			u.setLogo("li");
+			u.setColor("yellow");
+			u.setSize("x");
+			u.setBuyprice("1");
+			u.setSellprice("100");
+			u.setEarn("99");
+			this.FormManager.save(u);
+		}
+	}
+	
+	
+	
+	
+	
+	
+	
+	
 
 	@Test
 	public void testFindAll() {

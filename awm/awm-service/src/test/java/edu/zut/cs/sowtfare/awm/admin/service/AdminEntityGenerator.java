@@ -3,8 +3,6 @@ package edu.zut.cs.sowtfare.awm.admin.service;
 import org.junit.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 
-import edu.zut.cs.sowtfare.awm.admin.domain.Group;
-
 import edu.zut.cs.sowtfare.awm.admin.domain.User;
 
 import edu.zut.cs.sowtfare.awm.admin.domain.Issue;
@@ -14,8 +12,8 @@ import edu.zut.cs.sowtfare.awm.base.service.GenericGenerator;
 
 public class AdminEntityGenerator extends GenericGenerator {
 
-	@Autowired
-	GroupManager groupManager;
+//	@Autowired
+//	GroupManager groupManager;
 
 	@Autowired
 

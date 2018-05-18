@@ -33,6 +33,7 @@ public class Cloth extends BaseEntity {
 	
 	
 	
+
 	/*@ManyToOne
 	@JoinColumn(name="GROUP_ID")
 	Group group;
@@ -43,6 +44,8 @@ public class Cloth extends BaseEntity {
 	public void setGroup(Group group) {
 		this.group = group;
 	}*/
+
+
 
 	public String getClothname() {
 		return clothname;
