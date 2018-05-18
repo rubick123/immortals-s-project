@@ -2,8 +2,6 @@ package edu.zut.cs.sowtfare.awm.admin.domain;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
-import javax.persistence.JoinColumn;
-import javax.persistence.ManyToOne;
 import javax.persistence.Table;
 
 import edu.zut.cs.sowtfare.awm.base.domain.BaseEntity;
@@ -29,7 +27,13 @@ public class User extends BaseEntity {
 	
 	@Column(name="email")
 	String email;
+
 	
+	public String getUsername() {
+		return username;
+	}
+
+
 	public void setUsername(String username) {
 		this.username = username;
 	}
