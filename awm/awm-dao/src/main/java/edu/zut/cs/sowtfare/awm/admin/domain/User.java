@@ -30,16 +30,6 @@ public class User extends BaseEntity {
 	@Column(name="email")
 	String email;
 	
-	@ManyToOne
-	@JoinColumn(name="GROUP_ID")
-	Group group;
-	public Group getGroup() {
-		return group;
-	}
-
-	public void setGroup(Group group) {
-		this.group = group;
-	}
 	
 	public String getUsername() {
 		return username;
