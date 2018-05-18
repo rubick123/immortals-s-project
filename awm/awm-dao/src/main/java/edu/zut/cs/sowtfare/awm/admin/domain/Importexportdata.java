@@ -7,7 +7,7 @@ import javax.persistence.ManyToOne;
 import javax.persistence.Table;
 
 import edu.zut.cs.sowtfare.awm.base.domain.BaseEntity;
-import edu.zut.cs.sowtfare.awm.admin.domain.Group;
+
 
 @Table(name = "T_ADMIN_Importexportdata")
 @Entity
@@ -21,17 +21,7 @@ public class Importexportdata extends BaseEntity{
 	@Column(name = "NUMBER")
 	String number;
 	
-	public Group getGroup() {
-		return group;
-	}
-
-	public void setGroup(Group group) {
-		this.group = group;
-	}
-
-	@ManyToOne
-	@JoinColumn(name = "GROUP_ID")
-	Group group;
+	
 
 	public String getNumber() {
 		return number;

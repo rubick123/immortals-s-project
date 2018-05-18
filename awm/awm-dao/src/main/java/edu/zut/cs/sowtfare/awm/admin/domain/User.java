@@ -30,11 +30,14 @@ public class User extends BaseEntity {
 	@Column(name="email")
 	String email;
 	
+<<<<<<< HEAD
 	
 	public String getUsername() {
 		return username;
 	}
 
+=======
+>>>>>>> 1d41e60b273e68e9cb899e6363c17a9cc96b6678
 	public void setUsername(String username) {
 		this.username = username;
 	}

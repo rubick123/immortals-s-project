@@ -27,16 +27,7 @@ public class Issue extends BaseEntity {
 	@Column(name="Email")
 	String Email;
 	
-	@ManyToOne
-	@JoinColumn(name="GROUP_ID")
-	Group group;
-	public Group getGroup() {
-		return group;
-	}
-
-	public void setGroup(Group group) {
-		this.group = group;
-	}
+	
 	
 	public String getIssuename() {
 		return Issuename;

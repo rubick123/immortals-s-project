@@ -32,17 +32,7 @@ public class Form extends BaseEntity {
 	
 	@Column(name="earn")
 	String earn;
-	@ManyToOne
-	@JoinColumn(name="GROUP_ID")
-	Group group;
-	public Group getGroup() {
-		return group;
-	}
-
-	public void setGroup(Group group) {
-		this.group = group;
-	}
-
+	
 	public String getLogo() {
 		return logo;
 	}

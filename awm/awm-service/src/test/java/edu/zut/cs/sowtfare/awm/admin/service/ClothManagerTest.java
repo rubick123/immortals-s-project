@@ -12,7 +12,6 @@ import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 
 import edu.zut.cs.sowtfare.awm.admin.domain.Cloth;
 
-import edu.zut.cs.sowtfare.awm.admin.domain.Group;
 import edu.zut.cs.sowtfare.awm.base.service.GenericGenerator;
 
 //@RunWith(SpringJUnit4ClassRunner.class)
