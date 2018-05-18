@@ -26,16 +26,6 @@ public class Cloth extends BaseEntity {
 	
 	@Column(name="price")
 	int price;
-	
-	
-	
-	
-	
-	
-
-
-
-
 
 	public String getClothname() {
 		return clothname;
