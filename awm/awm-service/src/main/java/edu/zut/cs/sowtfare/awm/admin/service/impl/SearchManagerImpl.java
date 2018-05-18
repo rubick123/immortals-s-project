@@ -5,7 +5,6 @@ import org.springframework.stereotype.Component;
 
 import edu.zut.cs.sowtfare.awm.admin.dao.SearchDao;
 import edu.zut.cs.sowtfare.awm.admin.domain.Search;
-import edu.zut.cs.sowtfare.awm.admin.domain.User;
 import edu.zut.cs.sowtfare.awm.admin.service.SearchManager;
 import edu.zut.cs.sowtfare.awm.base.service.impl.GenericManagerImpl;
 
