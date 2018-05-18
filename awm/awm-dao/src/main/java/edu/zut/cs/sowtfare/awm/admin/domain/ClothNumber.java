@@ -7,7 +7,7 @@ import javax.persistence.ManyToOne;
 import javax.persistence.Table;
 
 import edu.zut.cs.sowtfare.awm.base.domain.BaseEntity;
-import edu.zut.cs.sowtfare.awm.admin.domain.Group;
+
 
 @Table(name = "CLOTH_NUMBER")
 @Entity
@@ -30,17 +30,7 @@ public class ClothNumber extends BaseEntity{
 	@Column(name = "num")
 	String num;
 	
-//	public Group getGroup() {
-//		return group;
-//	}
-//
-//	public void setGroup(Group group) {
-//		this.group = group;
-//	}
-//
-//	@ManyToOne
-//	@JoinColumn(name = "GROUP_ID")
-//	Group group;
+
 
 	public String getKind() {
 		return kind;
