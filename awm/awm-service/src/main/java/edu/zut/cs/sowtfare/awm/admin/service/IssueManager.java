@@ -9,5 +9,5 @@ public interface IssueManager extends GenericManager<Issue, Long> {
 
 	List<Issue> findAll();
 
-	Issue findbyIssuename(String username);
+	Issue findbyIssuename(String Issuename);
 }

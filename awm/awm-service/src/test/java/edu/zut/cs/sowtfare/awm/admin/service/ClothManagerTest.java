@@ -18,42 +18,39 @@ import edu.zut.cs.sowtfare.awm.base.service.GenericGenerator;
 //@ContextConfiguration(classes = AdminServiceConfig.class)
 public class ClothManagerTest extends GenericGenerator{
 
-		@Autowired
-		ClothManager clothManager;
-		
-		
-		@Test
-		public void insert_Cloth()
+	@Autowired
+	ClothManager clothManager;
+	
+	@Test
+	public void insert_Cloth()
+	{
+		for(int i=0;i<100;i++)
 		{
-			for(int i=0;i<100;i++)
-			{
-				Cloth u = new Cloth();
-				u.setClothname("zhq");
-				u.setColor("Green");
-				u.setClothsize(43);
-				u.setPrice(100);
-				u.setClothnumber(250);
-				
-				this.clothManager.save(u);
-			}
+			Cloth u = new Cloth();
+			u.setClothname("zhq");
+			u.setColor("Green");
+			u.setClothsize(43);
+			u.setPrice(100);
+			u.setClothnumber(250);
+			
+			this.clothManager.save(u);
 		}
+	}
 
-		@Test
-		public void testFindAll() {
-			List<Cloth> all = this.clothManager.findAll();
-			assertEquals(all.size(), 100);
-		}
-		
-		@Test
-		public void testFindbyClothname() {
-			String Clothname = "world";
-			Cloth expected_cloth = new Cloth();
-			// expected_customerServicer.setCustomerServicername(CustomerServicername);
-			Cloth cloth= this.clothManager.findbyClothname(Clothname);
-			// assertEquals(customerServicer.getCustomerServicername(), expected_customerServicer.CustomerServicername());
-			assertEquals(cloth, expected_cloth);
-		}
-
-
+	@Test
+	public void testFindAll() {
+		List<Cloth> all = this.clothManager.findAll();
+		assertEquals(all.size(), 100);
+	}
+	
+	@Test
+	public void testFindbyClothname() {
+		String Clothname = "world";
+		Cloth expected_cloth = new Cloth();
+		// expected_customerServicer.setCustomerServicername(CustomerServicername);
+		Cloth cloth= this.clothManager.findbyClothname(Clothname);
+		// assertEquals(customerServicer.getCustomerServicername(), expected_customerServicer.CustomerServicername());
+		assertEquals(cloth, expected_cloth);
+	}
 }
 

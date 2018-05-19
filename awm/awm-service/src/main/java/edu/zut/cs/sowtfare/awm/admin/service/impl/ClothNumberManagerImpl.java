@@ -11,11 +11,13 @@ import edu.zut.cs.sowtfare.awm.base.service.impl.GenericManagerImpl;
 public class ClothNumberManagerImpl extends GenericManagerImpl<ClothNumber, Long> implements ClothNumberManager{
 	
 	ClothNumberDao clothNumberDao;
+	
 	@Autowired
 	public void setClothNumberDao(ClothNumberDao clothNumberDao) {
 		this.clothNumberDao = clothNumberDao;
 		this.dao=this.clothNumberDao;
 	}
+	
 	@Override
 	public ClothNumber findbyClothNumber(String ClothNumber) {
 		// TODO Auto-generated method stub
