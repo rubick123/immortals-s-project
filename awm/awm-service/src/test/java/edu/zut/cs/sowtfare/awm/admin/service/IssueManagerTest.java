@@ -20,6 +20,7 @@ public class IssueManagerTest extends GenericGenerator{
 
 	@Autowired
 	IssueManager IssueManager;
+	
 	@Test
 	public void insert_Issue()
 	{
@@ -28,11 +29,11 @@ public class IssueManagerTest extends GenericGenerator{
 			Issue u = new Issue();
 			u.setphone("lph");
 			u.setnewsname("boss");
-			u.setEmail("1780954741@qq.com");
-			
+			u.setEmail("1780954741@qq.com");		
 			this.IssueManager.save(u);
 		}
 	}
+	
 	@Test
 	public void testFindAll() {
 		List<Issue> all = this.IssueManager.findAll();

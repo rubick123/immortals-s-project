@@ -10,5 +10,5 @@ public interface SearchManager extends GenericManager<Search, Long> {
 
 	List<Search> findAll();
 
-	Search findbySearchname(String searchname);
+	Search findbySearchname(String Searchname);
 }

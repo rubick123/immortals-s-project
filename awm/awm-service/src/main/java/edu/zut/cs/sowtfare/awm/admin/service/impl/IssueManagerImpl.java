@@ -21,7 +21,7 @@ public class IssueManagerImpl extends GenericManagerImpl<Issue, Long> implements
 	}
 
 	@Override
-	public Issue findbyIssuename(String username) {
+	public Issue findbyIssuename(String Issuename) {
 		// TODO Auto-generated method stub
 		return null;
 	}

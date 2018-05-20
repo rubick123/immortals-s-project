@@ -9,5 +9,5 @@ public interface UserManager extends GenericManager<User, Long> {
 
 	List<User> findAll();
 
-	User findbyUsername(String username);
+	User findbyUsername(String Username);
 }

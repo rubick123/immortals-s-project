@@ -16,8 +16,6 @@ public class ClothNumberManagerTest extends GenericGenerator{
 	@Autowired
 	ClothNumberManager clothNumberManager;
 	
-	
-	
 	@Test
 	public void add()
 	{
@@ -33,5 +31,4 @@ public class ClothNumberManagerTest extends GenericGenerator{
 		}
 		this.clothNumberManager.save(list);
 	}
-
 }

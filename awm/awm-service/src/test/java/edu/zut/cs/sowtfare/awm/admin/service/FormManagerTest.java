@@ -35,14 +35,6 @@ public class FormManagerTest extends GenericGenerator{
 			this.FormManager.save(u);
 		}
 	}
-	
-	
-	
-	
-	
-	
-	
-	
 
 	@Test
 	public void testFindAll() {
@@ -59,5 +51,4 @@ public class FormManagerTest extends GenericGenerator{
 		// assertEquals(user.getUsername(), expected_user.getUsername());
 		assertEquals(Form, expected_user);
 	}
-
 }

@@ -18,11 +18,11 @@ public class AdminEntityGenerator extends GenericGenerator {
 	@Autowired
 
 	UserManager userManager;
-
+	/*	
 	@Autowired
 	RoleManager roleManager;
 
-/*	
+
 
 	@Test
 	public void gen_group() {

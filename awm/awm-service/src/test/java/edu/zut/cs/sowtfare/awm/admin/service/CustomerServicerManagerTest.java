@@ -47,5 +47,4 @@ public class CustomerServicerManagerTest extends GenericGenerator{
 		// assertEquals(customerServicer.getCustomerServicername(), expected_customerServicer.CustomerServicername());
 		assertEquals(customerServicer, expected_customerServicer);
 	}
-
 }
