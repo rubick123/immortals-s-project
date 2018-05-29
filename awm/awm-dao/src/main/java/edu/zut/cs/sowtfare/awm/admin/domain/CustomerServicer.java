@@ -37,4 +37,8 @@ public class CustomerServicer extends BaseEntity{
 	public void setEmail(String email) {
 		this.email = email;
 	}
+	
+	public void display() {
+		System.out.println("customerservicername:"+customerservicername+" "+"email:"+email);
+	}
 }

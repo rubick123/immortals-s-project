@@ -21,7 +21,7 @@ public class CustomerServiceManagerImpl extends GenericManagerImpl<CustomerServi
 
 	@Override
 	public CustomerServicer findbyCustomerServicername(String CustomerServicername) {
-		// TODO Auto-generated method stub
-		return null;
+		CustomerServicer cs = customerServicerDao.findbyCustomerServicername(CustomerServicername);
+		return cs;
 	}
 }
