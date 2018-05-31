@@ -6,10 +6,10 @@ import javax.persistence.Table;
 
 import edu.zut.cs.sowtfare.awm.base.domain.BaseEntity;
 
-@Table(name="user")
+@Table(name="userinfo")
 @Entity
 
-public class User extends BaseEntity {
+public class UserInfo extends BaseEntity {
 	
 	private static final long  serialVersionUID = -4376674977047164142L;
 	@Column(name="username")
