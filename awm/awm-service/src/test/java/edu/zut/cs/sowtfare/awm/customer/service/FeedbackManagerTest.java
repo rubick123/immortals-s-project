@@ -1,7 +1,8 @@
-package edu.zut.cs.sowtfare.awm.feedback.service;
+package edu.zut.cs.sowtfare.awm.customer.service;
 
 import edu.zut.cs.sowtfare.awm.admin.service.AdminServiceConfig;
-import edu.zut.cs.sowtfare.awm.feedback.domain.FeedBack;
+import edu.zut.cs.sowtfare.awm.customer.service.FeedbackManager;
+import edu.zut.cs.sowtfare.awm.customer.domain.FeedBack;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;

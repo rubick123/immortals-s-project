@@ -2,6 +2,8 @@ package edu.zut.cs.sowtfare.awm.customer.service;
 
 import edu.zut.cs.sowtfare.awm.admin.domain.CustomerServicer;
 import edu.zut.cs.sowtfare.awm.admin.service.AdminServiceConfig;
+import edu.zut.cs.sowtfare.awm.customer.domain.Customer;
+
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -23,7 +25,7 @@ public class CustomerManagerTest {
     @Test
     public void testFindByPostcode() {
         String postcode = "NR74DU";
-        List<CustomerServicer> result = this.customerManager.findByPostcode(postcode);
+        List<Customer> result = this.customerManager.findByPostcode(postcode);
         List<CustomerServicer> expected = new ArrayList<CustomerServicer>();
         for (int i = 0; i < 10; i++) {
         	CustomerServicer u = new CustomerServicer();
