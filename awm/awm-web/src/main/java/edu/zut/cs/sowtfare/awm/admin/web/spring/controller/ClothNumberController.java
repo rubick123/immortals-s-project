@@ -15,9 +15,9 @@ public class ClothNumberController extends GenericController<ClothNumber, Long, 
 	ClothNumberManager clothnumberManager;
 	
 	@Autowired
-	 public void setUserManager(UserInfoManager clothnumberManager) {
+	 public void setUserManager(ClothNumberManager clothnumberManager) {
         this.clothnumberManager = clothnumberManager;
-        this.manager = this.ClothNumberManager;
+        this.manager = this.clothnumberManager;
     }
 
     @RequestMapping("/index")
