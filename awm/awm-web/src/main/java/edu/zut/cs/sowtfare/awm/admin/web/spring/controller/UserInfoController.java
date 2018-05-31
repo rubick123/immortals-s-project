@@ -22,7 +22,7 @@ public class UserInfoController extends GenericController<UserInfo, Long, UserIn
 
     @RequestMapping("/index")
     public String index() {
-        return "user/index";
+        return "userinfo/index";
     }
 }
 
