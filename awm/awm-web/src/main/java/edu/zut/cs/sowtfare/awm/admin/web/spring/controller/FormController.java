@@ -15,7 +15,7 @@ public class FormController extends GenericController<Form, Long, FormManager>{
 	FormManager FormManager;
 	
 	@Autowired
-	 public void setUserManager(FormManager clothnumberManager) {
+	 public void setUserManager(FormManager FormManager) {
         this.FormManager = FormManager;
         this.manager = this.FormManager;
     }
