@@ -18,9 +18,5 @@ public class CustomerServicerController extends GenericController<CustomerServic
         this. customerServicerManager = customerServicerManager;
         this.manager = this. customerServicerManager;
     }
-
-    @RequestMapping("/index")
-    public String index() {
-        return "customerservicer/index";
-    }
+    
 }
