@@ -3,6 +3,7 @@ package edu.zut.cs.sowtfare.awm.admin.web.spring.controller;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
 
 import edu.zut.cs.sowtfare.awm.admin.domain.UserInfo;
 import edu.zut.cs.sowtfare.awm.admin.service.UserInfoManager;
@@ -20,9 +21,10 @@ public class UserInfoController extends GenericController<UserInfo, Long, UserIn
         this.manager = this.userinfoManager;
     }
 
-    @RequestMapping("/index")
+    @RequestMapping(method = RequestMethod.GET, value = "/index.html")
     public String index() {
-        return "userinfo/index";
-    }
+		String result = "/userinfo/index";
+		return result;
+	}
 }
 
