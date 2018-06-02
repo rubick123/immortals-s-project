@@ -9,7 +9,7 @@ import edu.zut.cs.sowtfare.awm.admin.service.SearchManager;
 import edu.zut.cs.sowtfare.awm.base.web.spring.controller.GenericController;
 
 @Controller
-@RequestMapping("/customerservicer")
+@RequestMapping("/search")
 public class SearchController extends GenericController<Search, Long, SearchManager> {
 
     SearchManager searchManager;
