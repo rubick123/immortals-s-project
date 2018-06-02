@@ -1,6 +1,6 @@
 Ext.require(['Ext.data.*', 'Ext.grid.*']);
 
-Ext.define('student.StudentModel', {
+Ext.define('userinfo.UserInfoModel', {
 			extend : 'Ext.data.Model',
 			fields : [{
 						name : 'id',
@@ -221,7 +221,7 @@ new Ext.form.NumberField({
 
 var clearForm = function() {
 	Ext.Msg.alert('重置', '重置查询表单！');
-	studentForm.getForm().reset();
+	userinfoForm.getForm().reset();
 }
 
 var queryForm = function() {
