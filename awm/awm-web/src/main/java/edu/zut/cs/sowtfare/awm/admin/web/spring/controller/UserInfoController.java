@@ -11,7 +11,7 @@ import edu.zut.cs.sowtfare.awm.admin.service.UserInfoManager;
 import edu.zut.cs.sowtfare.awm.base.web.spring.controller.GenericController;
 
 @Controller
-@RequestMapping("/userinfo")
+@RequestMapping("/teach/userinfo")
 public class UserInfoController extends GenericController<UserInfo, Long, UserInfoManager>{
 	
 	UserInfoManager userinfoManager;

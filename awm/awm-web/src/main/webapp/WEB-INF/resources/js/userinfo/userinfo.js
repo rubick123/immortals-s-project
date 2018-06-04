@@ -1,6 +1,7 @@
 Ext.require(['Ext.data.*', 'Ext.grid.*']);
 
-Ext.define('userinfo.UserinfoModel', {
+Ext.define('userinfo.UserInfoModel', {
+
 			extend : 'Ext.data.Model',
 			fields : [{
 						name : 'id',
