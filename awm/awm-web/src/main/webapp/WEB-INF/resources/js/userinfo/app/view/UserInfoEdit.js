@@ -30,7 +30,7 @@ Ext.define('userinfo.view.UserInfoEdit', {
 				xtype : 'textfield',
 				name : 'email',
 				fieldLabel : '邮箱'
-			}, ]
+			} ]
 		} ];
 		this.buttons = [ {
 			text : '保存',
