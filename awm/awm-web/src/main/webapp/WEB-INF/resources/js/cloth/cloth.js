@@ -125,7 +125,7 @@ var clothGrid = new Ext.grid.GridPanel({
 			loadMask : true,
 			stripeRows : true,
 			width : 600,
-			title : '服装信息录入表',
+			title : '服装信息表',
 			columns : [{
 						text : 'ID',
 						width : 50,
