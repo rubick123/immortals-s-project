@@ -1,17 +1,17 @@
 var pageSize = 20;
 
-Ext.define('search.store.SearchStore', {
+Ext.define('userinfo.store.UserInfoStore', {
 	extend : 'Ext.data.Store',
-	alias : 'widget.searchStore',
+	alias : 'widget.userinfoStore',
 	autoLoad : true,
 	autoSync : true,// 需要同步
-	model : 'search.model.SearchModel',
+	model : 'userinfo.model.UserInfoModel',
 	proxy : {
-		url : server_context + '/teach/search/.json',
+		url : server_context + '/teach/userinfo/.json',
 		type : 'ajax',
 		api : {
-			read : server_context + '/teach/search/.json',
-			update : server_context + '/teach/search/.json'
+			read : server_context + '/teach/userinfo/.json',
+			update : server_context + '/teach/userinfo/.json'
 		},
 		reader : {
 			type : 'json',
