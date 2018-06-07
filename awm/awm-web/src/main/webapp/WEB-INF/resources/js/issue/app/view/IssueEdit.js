@@ -1,7 +1,7 @@
-Ext.define('userinfo.view.UserInfoEdit', {
+Ext.define('issue.view.IssueEdit', {
 	extend : 'Ext.window.Window',
-	alias : 'widget.userinfoEdit',
-	title : '编辑用户相关信息',
+	alias : 'widget.issueEdit',
+	title : '编辑商品相关信息',
 	layout : 'fit',
 	autoShow : true,
 	initComponent : function() {
@@ -16,16 +16,8 @@ Ext.define('userinfo.view.UserInfoEdit', {
 				fieldLabel : '电话'
 			}, {
 				xtype : 'textfield',
-				name : 'username',
-				fieldLabel : '用户名'
-			}, {
-				xtype : 'textfield',
-				name : 'nickname',
-				fieldLabel : '昵称'
-			}, {
-				xtype : 'textfield',
-				name : 'password',
-				fieldLabel : '密码'
+				name : 'itemname',
+				fieldLabel : '商品名'
 			}, {
 				xtype : 'textfield',
 				name : 'email',

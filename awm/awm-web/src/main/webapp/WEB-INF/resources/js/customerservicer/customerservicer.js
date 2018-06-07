@@ -1,6 +1,6 @@
 Ext.require(['Ext.data.*', 'Ext.grid.*']);
 
-Ext.define('userinfo.UserInfoModel', {
+Ext.define('customerservicer.CustomerServicerModel', {
 
 			extend : 'Ext.data.Model',
 			fields : [{
@@ -8,26 +8,14 @@ Ext.define('userinfo.UserInfoModel', {
 						type : 'int',
 						sortable : true
 					}, {
-						name : 'tel',
-						type : 'string',
-						sortable : true
-					}, {
-						name : 'username',
-						type : 'string',
-						sortable : true
-					}, {
-						name : 'nickname',
-						type : 'string',
-						sortable : true
-					}, {
-						name : 'password',
-						type : 'string',
-						sortable : true
-					}, {
 						name : 'email',
 						type : 'string',
 						sortable : true
 					}, {
+						name : 'customerservicername',
+						type : 'string',
+						sortable : true
+					},{
 						name : 'dateCreated',
 						type : 'date',
 						dateFormat : 'time',
@@ -45,7 +33,7 @@ var pageSize = 20;
 var store = new Ext.data.Store({
 			autoLoad : true,
 			autoSync : true,// 需要同步
-			model : 'userinfo.UserInfoModel',
+			model : 'customerservicer.CustomerServicerModel',
 			proxy : {
 				type : 'rest',
 				url : './.json',
@@ -117,8 +105,8 @@ var rowEditing = Ext.create('Ext.grid.plugin.RowEditing', {
 			}
 		});
 
-var userinfoGrid = new Ext.grid.GridPanel({
-			id : 'userinfoGrid',
+var customerservicerGrid = new Ext.grid.GridPanel({
+			id : 'customerservicerGrid',
 			plugins : [rowEditing],
 			store : store,
 			region : 'center',
@@ -126,48 +114,30 @@ var userinfoGrid = new Ext.grid.GridPanel({
 			loadMask : true,
 			stripeRows : true,
 			width : 600,
-			title : '用户信息表',
+			title : '客服信息表',
 			columns : [{
 						text : 'ID',
 						width : 50,
 						sortable : true,
 						dataIndex : 'id'
 					}, {
-						text : "电话",
+						text : "邮箱",
 						width : 120,
 						sortable : true,
-						dataIndex : 'tel',
+						dataIndex : 'email',
 						editor : textFieldEditor,
 						field : {
 							xtype : 'textfield'
 						}
 					}, {
-						text : "用户名",
+						text : "姓名",
 						width : 80,
 						sortable : true,
-						dataIndex : 'username',
+						dataIndex : 'customerservicername',
 						editor : textFieldEditor,
 						field : {
 							xtype : 'textfield'
 						}
-					}, {
-						text : "昵称",
-						width : 50,
-						sortable : true,
-						dataIndex : 'nickname',
-						editor : textFieldEditor
-					}, {
-						text : "密码",
-						width : 50,
-						sortable : true,
-						editor : textFieldEditor,
-						dataIndex : 'password'
-					}, {
-						text : "邮箱",
-						width : 80,
-						sortable : true,
-						editor : textFieldEditor,
-						dataIndex : 'email'
 					}, {
 						text : "添加时间",
 						width : 150,
@@ -207,9 +177,9 @@ var userinfoGrid = new Ext.grid.GridPanel({
 			}
 		});
 
-userinfoGrid.getSelectionModel().on('selectionchange',
+customerservicerGrid.getSelectionModel().on('selectionchange',
 		function(selModel, selections) {
-			userinfoGrid.down('#delete').setDisabled(selections.length === 0);
+			customerservicerGrid.down('#delete').setDisabled(selections.length === 0);
 		});
 
 new Ext.form.NumberField({
@@ -222,13 +192,13 @@ new Ext.form.NumberField({
 
 var clearForm = function() {
 	Ext.Msg.alert('重置', '重置查询表单！');
-	userinfoForm.getForm().reset();
+	customerservicerForm.getForm().reset();
 }
 
 var queryForm = function() {
 	Ext.Msg.alert('查询', '将开始执行查询！');
 }
-var userinfoForm = new Ext.form.FormPanel({
+var customerservicerForm = new Ext.form.FormPanel({
 			title : '信息查询',
 			width : 200,
 			height : 200,
@@ -237,17 +207,13 @@ var userinfoForm = new Ext.form.FormPanel({
 			defaultType : 'textfiled',
 			labelWidth : 30,
 			items : [{
-						fieldLabel : "用户名",
+						fieldLabel : "邮箱",
 						xtype : 'textfield',
-						name : 'username'
+						name : 'email'
 					}, {
-						fieldLabel : "昵称",
+						fieldLabel : "姓名",
 						xtype : 'textfield',
-						name : 'nickname'
-					}, {
-						fieldLabel : "密码",
-						xtype : 'textfield',
-						name : 'password'
+						name : 'customerservicername'
 					}],
 			buttons : [{
 						xtype : 'button',
@@ -263,13 +229,14 @@ var userinfoForm = new Ext.form.FormPanel({
 		})
 
 Ext.application({
-			name : '用户信息',
+			name : '客服信息',
 			launch : function() {
 				Ext.create('Ext.container.Viewport', {
 							layout : 'border',
-							items : [userinfoForm, userinfoGrid]
+							items : [customerservicerForm, customerservicerGrid]
 						});
 			}
 		});
+
 
 

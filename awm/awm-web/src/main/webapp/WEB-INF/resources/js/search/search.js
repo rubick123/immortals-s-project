@@ -1,30 +1,13 @@
 Ext.require(['Ext.data.*', 'Ext.grid.*']);
 
-Ext.define('userinfo.UserInfoModel', {
-
+Ext.define('student.StudentModel', {
 			extend : 'Ext.data.Model',
 			fields : [{
 						name : 'id',
 						type : 'int',
 						sortable : true
 					}, {
-						name : 'tel',
-						type : 'string',
-						sortable : true
-					}, {
-						name : 'username',
-						type : 'string',
-						sortable : true
-					}, {
-						name : 'nickname',
-						type : 'string',
-						sortable : true
-					}, {
-						name : 'password',
-						type : 'string',
-						sortable : true
-					}, {
-						name : 'email',
+						name : 'document',
 						type : 'string',
 						sortable : true
 					}, {
@@ -117,8 +100,8 @@ var rowEditing = Ext.create('Ext.grid.plugin.RowEditing', {
 			}
 		});
 
-var userinfoGrid = new Ext.grid.GridPanel({
-			id : 'userinfoGrid',
+var searchGrid = new Ext.grid.GridPanel({
+			id : 'searchGrid',
 			plugins : [rowEditing],
 			store : store,
 			region : 'center',
@@ -126,48 +109,18 @@ var userinfoGrid = new Ext.grid.GridPanel({
 			loadMask : true,
 			stripeRows : true,
 			width : 600,
-			title : '用户信息表',
+			title : '搜索历史表',
 			columns : [{
 						text : 'ID',
 						width : 50,
 						sortable : true,
 						dataIndex : 'id'
 					}, {
-						text : "电话",
-						width : 120,
-						sortable : true,
-						dataIndex : 'tel',
-						editor : textFieldEditor,
-						field : {
-							xtype : 'textfield'
-						}
-					}, {
-						text : "用户名",
-						width : 80,
-						sortable : true,
-						dataIndex : 'username',
-						editor : textFieldEditor,
-						field : {
-							xtype : 'textfield'
-						}
-					}, {
-						text : "昵称",
-						width : 50,
-						sortable : true,
-						dataIndex : 'nickname',
-						editor : textFieldEditor
-					}, {
-						text : "密码",
-						width : 50,
-						sortable : true,
-						editor : textFieldEditor,
-						dataIndex : 'password'
-					}, {
-						text : "邮箱",
+						text : "搜索名",
 						width : 80,
 						sortable : true,
 						editor : textFieldEditor,
-						dataIndex : 'email'
+						dataIndex : 'document'
 					}, {
 						text : "添加时间",
 						width : 150,
@@ -207,7 +160,7 @@ var userinfoGrid = new Ext.grid.GridPanel({
 			}
 		});
 
-userinfoGrid.getSelectionModel().on('selectionchange',
+searchGrid.getSelectionModel().on('selectionchange',
 		function(selModel, selections) {
 			userinfoGrid.down('#delete').setDisabled(selections.length === 0);
 		});
@@ -222,13 +175,13 @@ new Ext.form.NumberField({
 
 var clearForm = function() {
 	Ext.Msg.alert('重置', '重置查询表单！');
-	userinfoForm.getForm().reset();
+	studentForm.getForm().reset();
 }
 
 var queryForm = function() {
 	Ext.Msg.alert('查询', '将开始执行查询！');
 }
-var userinfoForm = new Ext.form.FormPanel({
+var searchForm = new Ext.form.FormPanel({
 			title : '信息查询',
 			width : 200,
 			height : 200,
@@ -237,17 +190,9 @@ var userinfoForm = new Ext.form.FormPanel({
 			defaultType : 'textfiled',
 			labelWidth : 30,
 			items : [{
-						fieldLabel : "用户名",
+						fieldLabel : "搜索历史",
 						xtype : 'textfield',
-						name : 'username'
-					}, {
-						fieldLabel : "昵称",
-						xtype : 'textfield',
-						name : 'nickname'
-					}, {
-						fieldLabel : "密码",
-						xtype : 'textfield',
-						name : 'password'
+						name : 'documentname'
 					}],
 			buttons : [{
 						xtype : 'button',
@@ -263,13 +208,11 @@ var userinfoForm = new Ext.form.FormPanel({
 		})
 
 Ext.application({
-			name : '用户信息',
+			name : '信息',
 			launch : function() {
 				Ext.create('Ext.container.Viewport', {
 							layout : 'border',
-							items : [userinfoForm, userinfoGrid]
+							items : [searchForm, searchGrid]
 						});
 			}
 		});
-
-

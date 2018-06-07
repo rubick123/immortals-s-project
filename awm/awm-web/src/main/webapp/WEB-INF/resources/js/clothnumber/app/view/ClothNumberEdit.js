@@ -1,7 +1,7 @@
-Ext.define('userinfo.view.UserInfoEdit', {
+Ext.define('cloth_number.view.ClothNumberEdit', {
 	extend : 'Ext.window.Window',
-	alias : 'widget.userinfoEdit',
-	title : '编辑用户相关信息',
+	alias : 'widget.clothnumberEdit',
+	title : '统计信息',
 	layout : 'fit',
 	autoShow : true,
 	initComponent : function() {
@@ -12,25 +12,21 @@ Ext.define('userinfo.view.UserInfoEdit', {
 			border : false,
 			items : [ {
 				xtype : 'textfield',
-				name : 'tel',
-				fieldLabel : '电话'
+				name : 'kind',
+				fieldLabel : '种类'
 			}, {
 				xtype : 'textfield',
-				name : 'username',
-				fieldLabel : '用户名'
+				name : 'color',
+				fieldLabel : '颜色'
 			}, {
 				xtype : 'textfield',
-				name : 'nickname',
-				fieldLabel : '昵称'
+				name : 'num',
+				fieldLabel : '数量'
 			}, {
 				xtype : 'textfield',
-				name : 'password',
-				fieldLabel : '密码'
-			}, {
-				xtype : 'textfield',
-				name : 'email',
-				fieldLabel : '邮箱'
-			} ]
+				name : 'size',
+				fieldLabel : '尺码'
+			},]
 		} ];
 		this.buttons = [ {
 			text : '保存',

@@ -1,7 +1,7 @@
-Ext.define('userinfo.view.UserInfoEdit', {
+Ext.define('customerservicer.view.CustomerServicerEdit', {
 	extend : 'Ext.window.Window',
-	alias : 'widget.userinfoEdit',
-	title : '编辑用户相关信息',
+	alias : 'widget.customerservicerEdit',
+	title : '编辑客服相关信息',
 	layout : 'fit',
 	autoShow : true,
 	initComponent : function() {
@@ -10,23 +10,11 @@ Ext.define('userinfo.view.UserInfoEdit', {
 			height : 300,
 			width : 300,
 			border : false,
-			items : [ {
+			items : [{
 				xtype : 'textfield',
-				name : 'tel',
-				fieldLabel : '电话'
-			}, {
-				xtype : 'textfield',
-				name : 'username',
-				fieldLabel : '用户名'
-			}, {
-				xtype : 'textfield',
-				name : 'nickname',
-				fieldLabel : '昵称'
-			}, {
-				xtype : 'textfield',
-				name : 'password',
-				fieldLabel : '密码'
-			}, {
+				name : 'customerservicername',
+				fieldLabel : '姓名'
+			},{
 				xtype : 'textfield',
 				name : 'email',
 				fieldLabel : '邮箱'
@@ -43,3 +31,4 @@ Ext.define('userinfo.view.UserInfoEdit', {
 		this.callParent(arguments);
 	}
 });
+

@@ -1,31 +1,30 @@
 Ext.require(['Ext.data.*', 'Ext.grid.*']);
 
-Ext.define('userinfo.UserInfoModel', {
-
+Ext.define('cloth.ClothModel', {
 			extend : 'Ext.data.Model',
 			fields : [{
 						name : 'id',
 						type : 'int',
 						sortable : true
 					}, {
-						name : 'tel',
+						name : 'clothname',
 						type : 'string',
 						sortable : true
 					}, {
-						name : 'username',
+						name : 'clothnumber',
+						type : 'int',
+						sortable : true
+					}, {
+						name : 'clothsize',
+						type : 'int',
+						sortable : true
+					}, {
+						name : 'color',
 						type : 'string',
 						sortable : true
 					}, {
-						name : 'nickname',
-						type : 'string',
-						sortable : true
-					}, {
-						name : 'password',
-						type : 'string',
-						sortable : true
-					}, {
-						name : 'email',
-						type : 'string',
+						name : 'price',
+						type : 'int',
 						sortable : true
 					}, {
 						name : 'dateCreated',
@@ -45,7 +44,7 @@ var pageSize = 20;
 var store = new Ext.data.Store({
 			autoLoad : true,
 			autoSync : true,// 需要同步
-			model : 'userinfo.UserInfoModel',
+			model : 'cloth.ClothModel',
 			proxy : {
 				type : 'rest',
 				url : './.json',
@@ -117,8 +116,8 @@ var rowEditing = Ext.create('Ext.grid.plugin.RowEditing', {
 			}
 		});
 
-var userinfoGrid = new Ext.grid.GridPanel({
-			id : 'userinfoGrid',
+var clothGrid = new Ext.grid.GridPanel({
+			id : 'clothGrid',
 			plugins : [rowEditing],
 			store : store,
 			region : 'center',
@@ -126,48 +125,48 @@ var userinfoGrid = new Ext.grid.GridPanel({
 			loadMask : true,
 			stripeRows : true,
 			width : 600,
-			title : '用户信息表',
+			title : '服装信息表',
 			columns : [{
 						text : 'ID',
 						width : 50,
 						sortable : true,
 						dataIndex : 'id'
 					}, {
-						text : "电话",
+						text : "服装名称",
 						width : 120,
 						sortable : true,
-						dataIndex : 'tel',
+						dataIndex : 'clothname',
 						editor : textFieldEditor,
 						field : {
 							xtype : 'textfield'
 						}
 					}, {
-						text : "用户名",
+						text : "服装数目",
 						width : 80,
 						sortable : true,
-						dataIndex : 'username',
+						dataIndex : 'clothnumber',
 						editor : textFieldEditor,
 						field : {
 							xtype : 'textfield'
 						}
 					}, {
-						text : "昵称",
+						text : "服装尺寸",
 						width : 50,
 						sortable : true,
-						dataIndex : 'nickname',
+						dataIndex : 'clothsize',
 						editor : textFieldEditor
 					}, {
-						text : "密码",
+						text : "价格",
 						width : 50,
 						sortable : true,
 						editor : textFieldEditor,
-						dataIndex : 'password'
+						dataIndex : 'price'
 					}, {
-						text : "邮箱",
+						text : "颜色",
 						width : 80,
 						sortable : true,
 						editor : textFieldEditor,
-						dataIndex : 'email'
+						dataIndex : 'color'
 					}, {
 						text : "添加时间",
 						width : 150,
@@ -207,9 +206,9 @@ var userinfoGrid = new Ext.grid.GridPanel({
 			}
 		});
 
-userinfoGrid.getSelectionModel().on('selectionchange',
+clothGrid.getSelectionModel().on('selectionchange',
 		function(selModel, selections) {
-			userinfoGrid.down('#delete').setDisabled(selections.length === 0);
+	clothGrid.down('#delete').setDisabled(selections.length === 0);
 		});
 
 new Ext.form.NumberField({
@@ -222,13 +221,13 @@ new Ext.form.NumberField({
 
 var clearForm = function() {
 	Ext.Msg.alert('重置', '重置查询表单！');
-	userinfoForm.getForm().reset();
+	clothForm.getForm().reset();
 }
 
 var queryForm = function() {
 	Ext.Msg.alert('查询', '将开始执行查询！');
 }
-var userinfoForm = new Ext.form.FormPanel({
+var clothForm = new Ext.form.FormPanel({
 			title : '信息查询',
 			width : 200,
 			height : 200,
@@ -237,17 +236,17 @@ var userinfoForm = new Ext.form.FormPanel({
 			defaultType : 'textfiled',
 			labelWidth : 30,
 			items : [{
-						fieldLabel : "用户名",
+						fieldLabel : "服装名称",
 						xtype : 'textfield',
-						name : 'username'
+						name : 'clothname'
 					}, {
-						fieldLabel : "昵称",
+						fieldLabel : "服装数目",
 						xtype : 'textfield',
-						name : 'nickname'
+						name : 'clothnumber'
 					}, {
-						fieldLabel : "密码",
+						fieldLabel : "服装尺寸",
 						xtype : 'textfield',
-						name : 'password'
+						name : 'clothsize'
 					}],
 			buttons : [{
 						xtype : 'button',
@@ -263,13 +262,11 @@ var userinfoForm = new Ext.form.FormPanel({
 		})
 
 Ext.application({
-			name : '用户信息',
+			name : '服装信息',
 			launch : function() {
 				Ext.create('Ext.container.Viewport', {
 							layout : 'border',
-							items : [userinfoForm, userinfoGrid]
+							items : [clothForm, clothGrid]
 						});
 			}
 		});
-
-

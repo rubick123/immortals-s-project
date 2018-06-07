@@ -1,30 +1,25 @@
 Ext.require(['Ext.data.*', 'Ext.grid.*']);
 
-Ext.define('userinfo.UserInfoModel', {
-
+Ext.define('student.StudentModel', {
 			extend : 'Ext.data.Model',
 			fields : [{
 						name : 'id',
 						type : 'int',
 						sortable : true
 					}, {
-						name : 'tel',
+						name : 'kind',
 						type : 'string',
 						sortable : true
 					}, {
-						name : 'username',
+						name : 'color',
 						type : 'string',
 						sortable : true
 					}, {
-						name : 'nickname',
-						type : 'string',
+						name : 'num',
+						type : 'int',
 						sortable : true
 					}, {
-						name : 'password',
-						type : 'string',
-						sortable : true
-					}, {
-						name : 'email',
+						name : 'size',
 						type : 'string',
 						sortable : true
 					}, {
@@ -45,7 +40,7 @@ var pageSize = 20;
 var store = new Ext.data.Store({
 			autoLoad : true,
 			autoSync : true,// 需要同步
-			model : 'userinfo.UserInfoModel',
+			model : 'cloth_number.ClothNumberModel',
 			proxy : {
 				type : 'rest',
 				url : './.json',
@@ -118,7 +113,7 @@ var rowEditing = Ext.create('Ext.grid.plugin.RowEditing', {
 		});
 
 var userinfoGrid = new Ext.grid.GridPanel({
-			id : 'userinfoGrid',
+			id : 'clothnumberGrid',
 			plugins : [rowEditing],
 			store : store,
 			region : 'center',
@@ -133,41 +128,29 @@ var userinfoGrid = new Ext.grid.GridPanel({
 						sortable : true,
 						dataIndex : 'id'
 					}, {
-						text : "电话",
+						text : "种类",
 						width : 120,
 						sortable : true,
-						dataIndex : 'tel',
+						dataIndex : 'kind',
 						editor : textFieldEditor,
-						field : {
-							xtype : 'textfield'
-						}
 					}, {
-						text : "用户名",
+						text : "颜色",
 						width : 80,
 						sortable : true,
-						dataIndex : 'username',
+						dataIndex : 'color',
 						editor : textFieldEditor,
-						field : {
-							xtype : 'textfield'
-						}
 					}, {
-						text : "昵称",
+						text : "数量",
 						width : 50,
 						sortable : true,
-						dataIndex : 'nickname',
+						dataIndex : 'num',
 						editor : textFieldEditor
 					}, {
-						text : "密码",
+						text : "尺码",
 						width : 50,
 						sortable : true,
 						editor : textFieldEditor,
-						dataIndex : 'password'
-					}, {
-						text : "邮箱",
-						width : 80,
-						sortable : true,
-						editor : textFieldEditor,
-						dataIndex : 'email'
+						dataIndex : 'size'
 					}, {
 						text : "添加时间",
 						width : 150,
@@ -207,9 +190,9 @@ var userinfoGrid = new Ext.grid.GridPanel({
 			}
 		});
 
-userinfoGrid.getSelectionModel().on('selectionchange',
+clothnumberGrid.getSelectionModel().on('selectionchange',
 		function(selModel, selections) {
-			userinfoGrid.down('#delete').setDisabled(selections.length === 0);
+			clothnumberGrid.down('#delete').setDisabled(selections.length === 0);
 		});
 
 new Ext.form.NumberField({
@@ -222,13 +205,13 @@ new Ext.form.NumberField({
 
 var clearForm = function() {
 	Ext.Msg.alert('重置', '重置查询表单！');
-	userinfoForm.getForm().reset();
+	studentForm.getForm().reset();
 }
 
 var queryForm = function() {
 	Ext.Msg.alert('查询', '将开始执行查询！');
 }
-var userinfoForm = new Ext.form.FormPanel({
+var clothnumberForm = new Ext.form.FormPanel({
 			title : '信息查询',
 			width : 200,
 			height : 200,
@@ -267,9 +250,7 @@ Ext.application({
 			launch : function() {
 				Ext.create('Ext.container.Viewport', {
 							layout : 'border',
-							items : [userinfoForm, userinfoGrid]
+							items : [clothnumberForm, clothnumberGrid]
 						});
 			}
 		});
-
-

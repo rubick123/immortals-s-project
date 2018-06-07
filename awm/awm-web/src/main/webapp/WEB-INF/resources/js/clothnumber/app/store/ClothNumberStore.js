@@ -1,17 +1,17 @@
 var pageSize = 20;
 
-Ext.define('userinfo.store.UserInfoStore', {
+Ext.define('cloth_number.store.UserInfoStore', {
 	extend : 'Ext.data.Store',
-	alias : 'widget.userinfoStore',
+	alias : 'widget.clothnumberStore',
 	autoLoad : true,
 	autoSync : true,// 需要同步
-	model : 'userinfo.model.UserInfoModel',
+	model : 'clothnumberinfo.model.ClothNumberModel',
 	proxy : {
-		url : server_context + '/teach/userinfo/.json',
+		url : server_context + '/clothnumber/.json',
 		type : 'ajax',
 		api : {
-			read : server_context + '/teach/userinfo/.json',
-			update : server_context + '/teach/userinfo/.json'
+			read : server_context + '/clothnumber/.json',
+			update : server_context + '/clothnumber/.json'
 		},
 		reader : {
 			type : 'json',
