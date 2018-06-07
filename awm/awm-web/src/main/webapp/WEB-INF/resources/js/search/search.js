@@ -1,6 +1,6 @@
 Ext.require(['Ext.data.*', 'Ext.grid.*']);
 
-Ext.define('student.StudentModel', {
+Ext.define('search.SearchModel', {
 			extend : 'Ext.data.Model',
 			fields : [{
 						name : 'id',
@@ -28,7 +28,7 @@ var pageSize = 20;
 var store = new Ext.data.Store({
 			autoLoad : true,
 			autoSync : true,// 需要同步
-			model : 'userinfo.UserInfoModel',
+			model : 'search.SearchModel',
 			proxy : {
 				type : 'rest',
 				url : './.json',
@@ -162,7 +162,7 @@ var searchGrid = new Ext.grid.GridPanel({
 
 searchGrid.getSelectionModel().on('selectionchange',
 		function(selModel, selections) {
-			userinfoGrid.down('#delete').setDisabled(selections.length === 0);
+			searchGrid.down('#delete').setDisabled(selections.length === 0);
 		});
 
 new Ext.form.NumberField({

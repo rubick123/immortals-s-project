@@ -1,6 +1,6 @@
-Ext.define('userinfo.model.UserInfoModel', {
+Ext.define('search.model.SearchModel', {
 	extend : 'Ext.data.Model',
-	alias : 'widget.userinfoModel',
+	alias : 'widget.searchModel',
 	fields : [ {
 		name : 'id',
 		type : 'int',

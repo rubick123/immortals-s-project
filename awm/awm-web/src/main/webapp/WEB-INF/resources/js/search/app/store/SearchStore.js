@@ -7,11 +7,11 @@ Ext.define('search.store.SearchStore', {
 	autoSync : true,// 需要同步
 	model : 'search.model.SearchModel',
 	proxy : {
-		url : server_context + '/teach/search/.json',
+		url : server_context + '/search/.json',
 		type : 'ajax',
 		api : {
-			read : server_context + '/teach/search/.json',
-			update : server_context + '/teach/search/.json'
+			read : server_context + '/search/.json',
+			update : server_context + '/search/.json'
 		},
 		reader : {
 			type : 'json',
