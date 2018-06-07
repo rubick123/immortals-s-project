@@ -1,6 +1,6 @@
 Ext.require(['Ext.data.*', 'Ext.grid.*']);
 
-Ext.define('issueinfo.IssueInfoModel', {
+Ext.define('issue.IssueModel', {
 
 			extend : 'Ext.data.Model',
 			fields : [{
@@ -37,7 +37,7 @@ var pageSize = 20;
 var store = new Ext.data.Store({
 			autoLoad : true,
 			autoSync : true,// 需要同步
-			model : 'issueinfo.IssueInfoModel',
+			model : 'issue.IssueModel',
 			proxy : {
 				type : 'rest',
 				url : './.json',
@@ -109,8 +109,8 @@ var rowEditing = Ext.create('Ext.grid.plugin.RowEditing', {
 			}
 		});
 
-var userinfoGrid = new Ext.grid.GridPanel({
-			id : 'issueinfoGrid',
+var issueGrid = new Ext.grid.GridPanel({
+			id : 'issueGrid',
 			plugins : [rowEditing],
 			store : store,
 			region : 'center',
@@ -187,9 +187,9 @@ var userinfoGrid = new Ext.grid.GridPanel({
 			}
 		});
 
-userinfoGrid.getSelectionModel().on('selectionchange',
+issueGrid.getSelectionModel().on('selectionchange',
 		function(selModel, selections) {
-			userinfoGrid.down('#delete').setDisabled(selections.length === 0);
+			issueGrid.down('#delete').setDisabled(selections.length === 0);
 		});
 
 new Ext.form.NumberField({
@@ -202,13 +202,13 @@ new Ext.form.NumberField({
 
 var clearForm = function() {
 	Ext.Msg.alert('重置', '重置查询表单！');
-	userinfoForm.getForm().reset();
+	issueForm.getForm().reset();
 }
 
 var queryForm = function() {
 	Ext.Msg.alert('查询', '将开始执行查询！');
 }
-var userinfoForm = new Ext.form.FormPanel({
+var issueForm = new Ext.form.FormPanel({
 			title : '信息查询',
 			width : 200,
 			height : 200,
@@ -217,17 +217,9 @@ var userinfoForm = new Ext.form.FormPanel({
 			defaultType : 'textfiled',
 			labelWidth : 30,
 			items : [{
-						fieldLabel : "用户名",
+						fieldLabel : "商品名",
 						xtype : 'textfield',
-						name : 'username'
-					}, {
-						fieldLabel : "昵称",
-						xtype : 'textfield',
-						name : 'nickname'
-					}, {
-						fieldLabel : "密码",
-						xtype : 'textfield',
-						name : 'password'
+						name : 'itemname'
 					}],
 			buttons : [{
 						xtype : 'button',
@@ -247,7 +239,7 @@ Ext.application({
 			launch : function() {
 				Ext.create('Ext.container.Viewport', {
 							layout : 'border',
-							items : [userinfoForm, userinfoGrid]
+							items : [issueForm, issueGrid]
 						});
 			}
 		});

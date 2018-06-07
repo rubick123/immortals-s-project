@@ -1,12 +1,12 @@
 var pageSize = 20;
 
-var issueinfoStore = Ext.create('issueinfo.store.IssueInfoStore');
+var issueStore = Ext.create('issue.store.IssueStore');
 
-Ext.define('issueinfo.view.InfoGrid', {
+Ext.define('issue.view.IssueGrid', {
 	extend : 'Ext.grid.GridPanel',
-	alias : 'widget.issueinfoGrid',
+	alias : 'widget.issueGrid',
 	title : '服装商品信息发布表',
-	store : issueinfoStore,
+	store : issueStore,
 	columns : [ {
 		text : 'ID',
 		width : 50,
@@ -21,7 +21,7 @@ Ext.define('issueinfo.view.InfoGrid', {
 		text : "商品名",
 		width : 80,
 		sortable : true,
-		dataIndex : 'username'
+		dataIndex : 'itemname'
 	}, {
 		text : "邮箱",
 		width : 80,
@@ -48,7 +48,7 @@ Ext.define('issueinfo.view.InfoGrid', {
 
 	bbar : new Ext.PagingToolbar({
 		pageSize : pageSize,// 每页显示的记录值
-		store : issueinfoStore,
+		store : issueStore,
 		displayInfo : true,
 		firstTest : '首页',
 		lastText : '尾页',
