@@ -1,5 +1,6 @@
-Ext.define('cloth.ClothModel', {
-			extend : 'Ext.data.Model',
+Ext.define('cloth.model.ClothModel', {
+	extend : 'Ext.data.Model',
+	alias : 'widget.clothModel',
 			fields : [{
 						name : 'id',
 						type : 'int',
