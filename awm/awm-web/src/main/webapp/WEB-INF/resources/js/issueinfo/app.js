@@ -2,14 +2,14 @@ Ext.Loader.setConfig({
 	enabled : true
 });
 Ext.application({
-	name : 'issueinfo',
-	appFolder : server_context + '/resources/js/issueinfo/app',
-	controllers : [ 'IssueInfoController' ],
+	name : 'issue',
+	appFolder : server_context + '/resources/js/issue/app',
+	controllers : [ 'IssueController' ],
 	launch : function() {
 		Ext.create('Ext.container.Viewport', {
 			layout : 'fit',
 			items : [ {
-				xtype : 'issueinfoGrid'
+				xtype : 'issueGrid'
 			} ]
 		});
 	}
