@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-		 xmlns="http://java.sun.com/xml/ns/javaee"
-		 xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd" 
-		 id="WebApp_ID" version="2.5">
-  <display-name>Java EE Samples</display-name>
+         xmlns="http://java.sun.com/xml/ns/sowtfare"
+         xsi:schemaLocation="http://java.sun.com/xml/ns/sowtfare http://java.sun.com/xml/ns/sowtfare/web-app_2_5.xsd"
+         id="WebApp_ID" version="2.5">
+    <display-name>Cloth System</display-name>
 
     <!--spring的应用上下文 -->
     <context-param>
@@ -87,10 +87,4 @@
         <servlet-name>DispatcherServlet</servlet-name>
         <url-pattern>/resources/*</url-pattern>
     </servlet-mapping>
-
-    <welcome-file-list>
-        <welcome-file>main/index.html</welcome-file>
-    </welcome-file-list>
-	
-	
 </web-app>

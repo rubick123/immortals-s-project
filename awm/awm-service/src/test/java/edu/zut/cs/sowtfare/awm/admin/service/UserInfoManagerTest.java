@@ -26,6 +26,9 @@ public class UserInfoManagerTest extends GenericGenerator{
 			UserInfo u = new UserInfo();
 			u.setUsername("xixi");
 			u.setEmail("123@163.com");
+			u.setNickname("lala");
+			u.setPassword("123456");
+			u.setTel("10086");
 			this.userinfoManager.save(u);
 		}
 	}
@@ -33,15 +36,15 @@ public class UserInfoManagerTest extends GenericGenerator{
 	@Test
 	public void testFindAll() {
 		List<UserInfo> all = this.userinfoManager.findAll();
-		assertEquals(all.size(), 100);
+		assertEquals(all.size(), 200);
 	}
 
 	@Test
 	public void testFindbyUsername() {
-		String username = "world";
+		String username = "xixi";
 		UserInfo expected_user = new UserInfo();
 		 //expected_user.setUsername(username);
-		UserInfo user = this.userinfoManager.findbyUsername(username);
+		List<UserInfo> user = this.userinfoManager.findByUsername(username);
 		 //assertEquals(user.getUsername(), expected_user.getUsername());
 		assertEquals(user, expected_user);
 	}
