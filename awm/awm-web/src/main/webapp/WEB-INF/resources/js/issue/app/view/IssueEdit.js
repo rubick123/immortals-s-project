@@ -1,6 +1,6 @@
-Ext.define('issueinfo.view.InfoEdit', {
+Ext.define('issue.view.IssueEdit', {
 	extend : 'Ext.window.Window',
-	alias : 'widget.issueinfoEdit',
+	alias : 'widget.issueEdit',
 	title : '编辑商品相关信息',
 	layout : 'fit',
 	autoShow : true,
