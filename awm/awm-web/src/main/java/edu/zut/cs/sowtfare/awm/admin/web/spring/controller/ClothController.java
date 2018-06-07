@@ -10,7 +10,7 @@ import edu.zut.cs.sowtfare.awm.admin.service.ClothManager;
 import edu.zut.cs.sowtfare.awm.base.web.spring.controller.GenericController;
 
 @Controller
-@RequestMapping("/Cloth")
+@RequestMapping("/cloth")
 public class ClothController extends GenericController<Cloth, Long, ClothManager> {
 	ClothManager clothmanager;
 

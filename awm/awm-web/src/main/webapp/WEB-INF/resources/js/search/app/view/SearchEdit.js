@@ -1,7 +1,7 @@
 Ext.define('search.view.SearchEdit', {
 	extend : 'Ext.window.Window',
 	alias : 'widget.searchEdit',
-	title : '编辑用户相关信息',
+	title : '搜索相关信息',
 	layout : 'fit',
 	autoShow : true,
 	initComponent : function() {

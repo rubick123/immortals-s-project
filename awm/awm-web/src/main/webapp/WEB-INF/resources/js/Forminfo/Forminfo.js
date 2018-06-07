@@ -1,13 +1,29 @@
 Ext.require(['Ext.data.*', 'Ext.grid.*']);
 
-Ext.define('search.SearchModel', {
+Ext.define('student.StudentModel', {
 			extend : 'Ext.data.Model',
 			fields : [{
-						name : 'id',
-						type : 'int',
+						name : 'logo',
+						type : 'string',
 						sortable : true
 					}, {
-						name : 'document',
+						name : 'color',
+						type : 'string',
+						sortable : true
+					}, {
+						name : 'size',
+						type : 'string',
+						sortable : true
+					}, {
+						name : 'buyprice',
+						type : 'string',
+						sortable : true
+					}, {
+						name : 'sellprice',
+						type : 'string',
+						sortable : true
+					}, {
+						name : 'earn',
 						type : 'string',
 						sortable : true
 					}, {
@@ -28,7 +44,7 @@ var pageSize = 20;
 var store = new Ext.data.Store({
 			autoLoad : true,
 			autoSync : true,// 需要同步
-			model : 'search.SearchModel',
+			model : 'Forminfo.FormInfoModel',
 			proxy : {
 				type : 'rest',
 				url : './.json',
@@ -100,8 +116,8 @@ var rowEditing = Ext.create('Ext.grid.plugin.RowEditing', {
 			}
 		});
 
-var searchGrid = new Ext.grid.GridPanel({
-			id : 'searchGrid',
+var ForminfoGrid = new Ext.grid.GridPanel({
+			id : 'ForminfoGrid',
 			plugins : [rowEditing],
 			store : store,
 			region : 'center',
@@ -109,18 +125,48 @@ var searchGrid = new Ext.grid.GridPanel({
 			loadMask : true,
 			stripeRows : true,
 			width : 600,
-			title : '搜索历史表',
+			title : '盈利统计表',
 			columns : [{
-						text : 'ID',
+						text : '品牌',
 						width : 50,
 						sortable : true,
-						dataIndex : 'id'
+						dataIndex : 'logo'
 					}, {
-						text : "搜索名",
+						text : "颜色",
+						width : 120,
+						sortable : true,
+						dataIndex : 'color',
+						editor : textFieldEditor,
+						field : {
+							xtype : 'textfield'
+						}
+					}, {
+						text : "尺寸",
+						width : 80,
+						sortable : true,
+						dataIndex : 'size',
+						editor : textFieldEditor,
+						field : {
+							xtype : 'textfield'
+						}
+					}, {
+						text : "进价",
+						width : 50,
+						sortable : true,
+						dataIndex : 'buyprice',
+						editor : textFieldEditor
+					}, {
+						text : "售价",
+						width : 50,
+						sortable : true,
+						editor : textFieldEditor,
+						dataIndex : 'sellprice'
+					}, {
+						text : "盈利",
 						width : 80,
 						sortable : true,
 						editor : textFieldEditor,
-						dataIndex : 'document'
+						dataIndex : 'earn'
 					}, {
 						text : "添加时间",
 						width : 150,
@@ -160,9 +206,9 @@ var searchGrid = new Ext.grid.GridPanel({
 			}
 		});
 
-searchGrid.getSelectionModel().on('selectionchange',
+ForminfoGrid.getSelectionModel().on('selectionchange',
 		function(selModel, selections) {
-			searchGrid.down('#delete').setDisabled(selections.length === 0);
+			ForminfoGrid.down('#delete').setDisabled(selections.length === 0);
 		});
 
 new Ext.form.NumberField({
@@ -181,8 +227,8 @@ var clearForm = function() {
 var queryForm = function() {
 	Ext.Msg.alert('查询', '将开始执行查询！');
 }
-var searchForm = new Ext.form.FormPanel({
-			title : '信息查询',
+var ForminfoForm = new Ext.form.FormPanel({
+			title : '盈利信息查询',
 			width : 200,
 			height : 200,
 			frame : true,
@@ -190,9 +236,29 @@ var searchForm = new Ext.form.FormPanel({
 			defaultType : 'textfiled',
 			labelWidth : 30,
 			items : [{
-						fieldLabel : "搜索历史",
+						fieldLabel : "品牌",
 						xtype : 'textfield',
-						name : 'documentname'
+						name : 'logo'
+					}, {
+						fieldLabel : "颜色",
+						xtype : 'textfield',
+						name : 'color'
+					}, {
+						fieldLabel : "尺寸",
+						xtype : 'textfield',
+						name : 'size'
+					}, {
+						fieldLabel : "进价",
+						xtype : 'textfield',
+						name : 'sellprice'
+					}, {
+						fieldLabel : "售价",
+						xtype : 'textfield',
+						name : 'sellprice'
+					}, {
+						fieldLabel : "盈利",
+						xtype : 'textfield',
+						name : 'earn'
 					}],
 			buttons : [{
 						xtype : 'button',
@@ -208,11 +274,11 @@ var searchForm = new Ext.form.FormPanel({
 		})
 
 Ext.application({
-			name : '信息',
+			name : '盈利信息',
 			launch : function() {
 				Ext.create('Ext.container.Viewport', {
 							layout : 'border',
-							items : [searchForm, searchGrid]
+							items : [ForminfoForm, ForminfoGrid]
 						});
 			}
 		});

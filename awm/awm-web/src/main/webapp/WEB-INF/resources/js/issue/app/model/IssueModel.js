@@ -1,6 +1,6 @@
-Ext.define('issueinfo.model.IssueInfoModel', {
+Ext.define('issue.model.IssueModel', {
 	extend : 'Ext.data.Model',
-	alias : 'widget.issueinfoModel',
+	alias : 'widget.issueModel',
 	fields : [ {
 		name : 'id',
 		type : 'int',

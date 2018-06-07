@@ -1,21 +1,21 @@
-Ext.define('issueinfo.controller.IssueInfoController', {
+Ext.define('Forminfo.controller.FormInfoController', {
 	extend : 'Ext.app.Controller',
-	alias : 'widget.issueinfoController',
-	stores : [ 'IssueInfoStore' ],
-	models : [ 'IssueInfoModel' ],
-	views : [ 'IssueInfoGrid', 'IssueInfoEdit' ],
+	alias : 'widget.ForminfoController',
+	stores : [ 'FormInfoStore' ],
+	models : [ 'FormInfoModel' ],
+	views : [ 'FormInfoGrid', 'FormInfoEdit' ],
 	init : function() {
 		this.control({
-			'issueinfoGrid' : {
+			'ForminfoGrid' : {
 				itemdblclick : this.editUserInfo
 			},
-			'issueinfoEdit button[action=save]' : {
+			'ForminfoEdit button[action=save]' : {
 				click : this.updateUserInfo
 			}
 		});
 	},
 	editUserInfo : function(grid, record) {
-		var view = Ext.widget('issueinfoEdit');
+		var view = Ext.widget('ForminfoEdit');
 		view.down('form').loadRecord(record);
 	},
 	updateUserInfo : function(button) {
