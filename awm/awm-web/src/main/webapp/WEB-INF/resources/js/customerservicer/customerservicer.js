@@ -1,7 +1,6 @@
 Ext.require(['Ext.data.*', 'Ext.grid.*']);
 
 Ext.define('customerservicer.CustomerServicerModel', {
-
 			extend : 'Ext.data.Model',
 			fields : [{
 						name : 'id',
