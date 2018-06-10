@@ -12,13 +12,13 @@ Ext.define('customerservicer.view.CustomerServicerEdit', {
 			border : false,
 			items : [{
 				xtype : 'textfield',
-				name : 'customerservicername',
-				fieldLabel : '姓名'
-			},{
-				xtype : 'textfield',
 				name : 'email',
 				fieldLabel : '邮箱'
-			} ]
+			} ,{
+				xtype : 'textfield',
+				name : 'customerservicername',
+				fieldLabel : '姓名'
+			}]
 		} ];
 		this.buttons = [ {
 			text : '保存',
