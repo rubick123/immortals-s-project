@@ -1,7 +1,7 @@
-Ext.define('cloth_number.view.ClothNumberEdit', {
+Ext.define('clothnumber.view.ClothNumberEdit', {
 	extend : 'Ext.window.Window',
 	alias : 'widget.clothnumberEdit',
-	title : '统计信息',
+	title : '编辑客服相关信息',
 	layout : 'fit',
 	autoShow : true,
 	initComponent : function() {
@@ -10,23 +10,23 @@ Ext.define('cloth_number.view.ClothNumberEdit', {
 			height : 300,
 			width : 300,
 			border : false,
-			items : [ {
-				xtype : 'textfield',
-				name : 'kind',
-				fieldLabel : '种类'
-			}, {
+			items : [{
 				xtype : 'textfield',
 				name : 'color',
 				fieldLabel : '颜色'
-			}, {
+			} ,{
+				xtype : 'textfield',
+				name : 'kind',
+				fieldLabel : '种类'
+			},{
 				xtype : 'textfield',
 				name : 'num',
 				fieldLabel : '数量'
-			}, {
+			},{
 				xtype : 'textfield',
 				name : 'size',
 				fieldLabel : '尺码'
-			},]
+			}]
 		} ];
 		this.buttons = [ {
 			text : '保存',
@@ -39,3 +39,4 @@ Ext.define('cloth_number.view.ClothNumberEdit', {
 		this.callParent(arguments);
 	}
 });
+

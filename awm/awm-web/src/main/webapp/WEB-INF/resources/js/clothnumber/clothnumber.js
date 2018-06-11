@@ -1,28 +1,28 @@
 Ext.require(['Ext.data.*', 'Ext.grid.*']);
 
-Ext.define('student.StudentModel', {
+Ext.define('clothnumber.ClothNumberModel', {
 			extend : 'Ext.data.Model',
 			fields : [{
 						name : 'id',
 						type : 'int',
 						sortable : true
 					}, {
-						name : 'kind',
-						type : 'string',
-						sortable : true
-					}, {
 						name : 'color',
 						type : 'string',
 						sortable : true
 					}, {
-						name : 'num',
-						type : 'int',
+						name : 'kind',
+						type : 'string',
 						sortable : true
-					}, {
+					},{
+						name : 'num',
+						type : 'string',
+						sortable : true
+					},{
 						name : 'size',
 						type : 'string',
 						sortable : true
-					}, {
+					},{
 						name : 'dateCreated',
 						type : 'date',
 						dateFormat : 'time',
@@ -40,7 +40,7 @@ var pageSize = 20;
 var store = new Ext.data.Store({
 			autoLoad : true,
 			autoSync : true,// 需要同步
-			model : 'cloth_number.ClothNumberModel',
+			model : 'clothnumber.ClothNumberModel',
 			proxy : {
 				type : 'rest',
 				url : './.json',
@@ -112,8 +112,8 @@ var rowEditing = Ext.create('Ext.grid.plugin.RowEditing', {
 			}
 		});
 
-var userinfoGrid = new Ext.grid.GridPanel({
-			id : 'clothnumberGrid',
+var customerservicerGrid = new Ext.grid.GridPanel({
+			id : 'customerservicerGrid',
 			plugins : [rowEditing],
 			store : store,
 			region : 'center',
@@ -121,36 +121,30 @@ var userinfoGrid = new Ext.grid.GridPanel({
 			loadMask : true,
 			stripeRows : true,
 			width : 600,
-			title : '用户信息表',
+			title : '客服信息表',
 			columns : [{
 						text : 'ID',
 						width : 50,
 						sortable : true,
 						dataIndex : 'id'
 					}, {
-						text : "种类",
+						text : "邮箱",
 						width : 120,
 						sortable : true,
-						dataIndex : 'kind',
+						dataIndex : 'email',
 						editor : textFieldEditor,
+						field : {
+							xtype : 'textfield'
+						}
 					}, {
-						text : "颜色",
+						text : "姓名",
 						width : 80,
 						sortable : true,
-						dataIndex : 'color',
+						dataIndex : 'customerservicername',
 						editor : textFieldEditor,
-					}, {
-						text : "数量",
-						width : 50,
-						sortable : true,
-						dataIndex : 'num',
-						editor : textFieldEditor
-					}, {
-						text : "尺码",
-						width : 50,
-						sortable : true,
-						editor : textFieldEditor,
-						dataIndex : 'size'
+						field : {
+							xtype : 'textfield'
+						}
 					}, {
 						text : "添加时间",
 						width : 150,
@@ -190,9 +184,9 @@ var userinfoGrid = new Ext.grid.GridPanel({
 			}
 		});
 
-clothnumberGrid.getSelectionModel().on('selectionchange',
+customerservicerGrid.getSelectionModel().on('selectionchange',
 		function(selModel, selections) {
-			clothnumberGrid.down('#delete').setDisabled(selections.length === 0);
+			customerservicerGrid.down('#delete').setDisabled(selections.length === 0);
 		});
 
 new Ext.form.NumberField({
@@ -205,13 +199,13 @@ new Ext.form.NumberField({
 
 var clearForm = function() {
 	Ext.Msg.alert('重置', '重置查询表单！');
-	studentForm.getForm().reset();
+	customerservicerForm.getForm().reset();
 }
 
 var queryForm = function() {
 	Ext.Msg.alert('查询', '将开始执行查询！');
 }
-var clothnumberForm = new Ext.form.FormPanel({
+var customerservicerForm = new Ext.form.FormPanel({
 			title : '信息查询',
 			width : 200,
 			height : 200,
@@ -220,17 +214,13 @@ var clothnumberForm = new Ext.form.FormPanel({
 			defaultType : 'textfiled',
 			labelWidth : 30,
 			items : [{
-						fieldLabel : "用户名",
+						fieldLabel : "邮箱",
 						xtype : 'textfield',
-						name : 'username'
+						name : 'email'
 					}, {
-						fieldLabel : "昵称",
+						fieldLabel : "姓名",
 						xtype : 'textfield',
-						name : 'nickname'
-					}, {
-						fieldLabel : "密码",
-						xtype : 'textfield',
-						name : 'password'
+						name : 'customerservicername'
 					}],
 			buttons : [{
 						xtype : 'button',
@@ -246,11 +236,14 @@ var clothnumberForm = new Ext.form.FormPanel({
 		})
 
 Ext.application({
-			name : '用户信息',
+			name : '客服信息',
 			launch : function() {
 				Ext.create('Ext.container.Viewport', {
 							layout : 'border',
-							items : [clothnumberForm, clothnumberGrid]
+							items : [customerservicerForm, customerservicerGrid]
 						});
 			}
 		});
+
+
+

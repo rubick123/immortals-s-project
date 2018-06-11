@@ -1,11 +1,11 @@
 var pageSize = 20;
 
-var userinfoStore = Ext.create('cloth_number.store.ClothNumberStore');
+var clothnumberStore = Ext.create('clothnumber.store.ClothNumberStore');
 
-Ext.define('cloth_number.view.ClothNumberGrid', {
+Ext.define('clothnumber.view.ClothNumberGrid', {
 	extend : 'Ext.grid.GridPanel',
 	alias : 'widget.clothnumberGrid',
-	title : '服装批发用户信息表',
+	title : 'Java EE 课程-学生列表',
 	store : clothnumberStore,
 	columns : [ {
 		text : 'ID',
@@ -13,25 +13,25 @@ Ext.define('cloth_number.view.ClothNumberGrid', {
 		sortable : true,
 		dataIndex : 'id'
 	}, {
-		text : "种类",
+		text : "学号",
 		width : 120,
 		sortable : true,
 		dataIndex : 'kind'
 	}, {
-		text : "颜色",
+		text : "姓名",
 		width : 80,
 		sortable : true,
 		dataIndex : 'color'
 	}, {
-		text : "数量",
-		width : 80,
-		sortable : true,
-		dataIndex : 'num'
-	}, {
-		text : "尺码",
+		text : "性别",
 		width : 80,
 		sortable : true,
 		dataIndex : 'size'
+	}, {
+		text : " 专业",
+		width : 80,
+		sortable : true,
+		dataIndex : 'num'
 	}, {
 		text : "添加时间",
 		width : 150,
@@ -53,7 +53,7 @@ Ext.define('cloth_number.view.ClothNumberGrid', {
 
 	bbar : new Ext.PagingToolbar({
 		pageSize : pageSize,// 每页显示的记录值
-		store : userinfoStore,
+		store : clothnumberStore,
 		displayInfo : true,
 		firstTest : '首页',
 		lastText : '尾页',

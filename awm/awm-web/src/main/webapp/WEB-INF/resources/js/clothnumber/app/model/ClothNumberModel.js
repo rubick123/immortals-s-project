@@ -1,4 +1,4 @@
-Ext.define('cloth_number.model.ClothNumberModel', {
+Ext.define('clothnumber.model.ClothNumberModel', {
 	extend : 'Ext.data.Model',
 	alias : 'widget.clothnumberModel',
 	fields : [ {
@@ -6,19 +6,19 @@ Ext.define('cloth_number.model.ClothNumberModel', {
 		type : 'int',
 		sortable : true
 	}, {
-		name : 'color',
-		type : 'string',
-		sortable : true
-	}, {
 		name : 'kind',
 		type : 'string',
 		sortable : true
 	}, {
-		name : 'num',
-		type : 'int',
+		name : 'color',
+		type : 'string',
 		sortable : true
 	}, {
 		name : 'size',
+		type : 'string',
+		sortable : true
+	}, {
+		name : 'num',
 		type : 'string',
 		sortable : true
 	}, {
