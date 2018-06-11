@@ -6,15 +6,15 @@ Ext.define('issue.model.IssueModel', {
 		type : 'int',
 		sortable : true
 	}, {
-		name : 'tel',
+		name : 'phone',
 		type : 'string',
 		sortable : true
 	}, {
-		name : 'itemname',
+		name : 'Issuemname',
 		type : 'string',
 		sortable : true
 	}, {
-		name : 'email',
+		name : 'Email',
 		type : 'string',
 		sortable : true
 	}, {

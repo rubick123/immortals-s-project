@@ -12,15 +12,15 @@ Ext.define('issue.view.IssueEdit', {
 			border : false,
 			items : [ {
 				xtype : 'textfield',
-				name : 'tel',
+				name : 'phone',
 				fieldLabel : '电话'
 			}, {
 				xtype : 'textfield',
-				name : 'itemname',
+				name : 'Issuename',
 				fieldLabel : '商品名'
 			}, {
 				xtype : 'textfield',
-				name : 'email',
+				name : 'Email',
 				fieldLabel : '邮箱'
 			} ]
 		} ];

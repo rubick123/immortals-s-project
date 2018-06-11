@@ -16,17 +16,17 @@ Ext.define('issue.view.IssueGrid', {
 		text : "电话",
 		width : 120,
 		sortable : true,
-		dataIndex : 'tel'
+		dataIndex : 'phone'
 	}, {
 		text : "商品名",
 		width : 80,
 		sortable : true,
-		dataIndex : 'itemname'
+		dataIndex : 'Issuename'
 	}, {
 		text : "邮箱",
 		width : 80,
 		sortable : true,
-		dataIndex : 'email'
+		dataIndex : 'Email'
 	}, {
 		text : "添加时间",
 		width : 150,
