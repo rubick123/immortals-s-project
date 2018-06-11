@@ -25,5 +25,6 @@
 <script type="text/javascript"
 	src="${pageContext.request.contextPath}/resources/js/search/app.js"></script>
 <body>
+I am the greatest wizard on the continent,rubick!
 </body>
 </html>
