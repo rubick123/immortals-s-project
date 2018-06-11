@@ -5,7 +5,7 @@ var importexportdataStore = Ext.create('importexportdata.store.ImportExportDataS
 Ext.define('importexportdata.view.ImportExportDataGrid', {
 	extend : 'Ext.grid.GridPanel',
 	alias : 'widget.importexportdataGrid',
-	title : '客服信息表',
+	title : '进出口信息表',
 	store : importexportdataStore,
 	columns : [ {
 		text : 'ID',
@@ -16,7 +16,7 @@ Ext.define('importexportdata.view.ImportExportDataGrid', {
 		text : "数量",
 		width : 80,
 		sortable : true,
-		dataIndex : 'importexportdatanumber'
+		dataIndex : 'NUMBER'
 	},  {
 		text : "添加时间",
 		width : 150,

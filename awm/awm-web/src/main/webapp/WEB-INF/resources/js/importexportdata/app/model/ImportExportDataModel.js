@@ -6,11 +6,7 @@ Ext.define('importexportdata.model.ImportExportDataModel', {
 		type : 'int',
 		sortable : true
 	}, {
-		name : 'email',
-		type : 'string',
-		sortable : true
-	}, {
-		name : 'importexportdataname',
+		name : 'NUMBER',
 		type : 'string',
 		sortable : true
 	}, {

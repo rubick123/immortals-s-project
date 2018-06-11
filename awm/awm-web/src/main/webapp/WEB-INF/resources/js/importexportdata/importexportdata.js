@@ -110,13 +110,22 @@ var importexportdataGrid = new Ext.grid.GridPanel({
 			loadMask : true,
 			stripeRows : true,
 			width : 600,
-			title : '客服信息表',
+			title : '进出口信息表',
 			columns : [{
 						text : 'ID',
 						width : 50,
 						sortable : true,
 						dataIndex : 'id'
 					}, {
+						text : "数量",
+						width : 120,
+						sortable : true,
+						dataIndex : 'NUMBER',
+						editor : textFieldEditor,
+						field : {
+							xtype : 'textfield'
+						}
+					},{
 						text : "添加时间",
 						width : 150,
 						dataIndex : 'dateCreated',
@@ -187,7 +196,7 @@ var importexportdataForm = new Ext.form.FormPanel({
 			items : [ {
 						fieldLabel : "数量",
 						xtype : 'textfield',
-						name : 'importexportdatanumber'
+						name : 'NUMBER'
 					}],
 			buttons : [{
 						xtype : 'button',

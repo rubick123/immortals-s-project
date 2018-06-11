@@ -1,7 +1,7 @@
 Ext.define('importexportdata.view.ImportExportDataEdit', {
 	extend : 'Ext.window.Window',
 	alias : 'widget.importexportdataEdit',
-	title : '编辑客服相关信息',
+	title : '编辑进出口相关信息',
 	layout : 'fit',
 	autoShow : true,
 	initComponent : function() {
@@ -12,7 +12,7 @@ Ext.define('importexportdata.view.ImportExportDataEdit', {
 			border : false,
 			items : [{
 				xtype : 'textfield',
-				name : 'importexportdatanumber',
+				name : 'NUMBER',
 				fieldLabel : '数量'
 			}, ]
 		} ];

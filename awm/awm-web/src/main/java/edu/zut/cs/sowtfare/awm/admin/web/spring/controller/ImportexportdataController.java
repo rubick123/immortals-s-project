@@ -6,6 +6,7 @@ import edu.zut.cs.sowtfare.awm.base.web.spring.controller.GenericController;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
 
 
 @Controller
@@ -15,13 +16,14 @@ public class ImportexportdataController extends GenericController<Importexportda
 	ImportexportdataManager importexportdataManager;
 	
 	@Autowired
-	 public void setUserManager(ImportexportdataManager ImportexportdataManageManager) {
+	 public void setUserManager(ImportexportdataManager importexportdataManager) {
         this.importexportdataManager = importexportdataManager;
         this.manager = this.importexportdataManager;
     }
 
-    @RequestMapping("/index")
+	@RequestMapping(method = RequestMethod.GET, value = "/index.html")
     public String index() {
-        return "importexportdata/index";
+        String result="importexportdata/index";
+        return result;
     }
 }
