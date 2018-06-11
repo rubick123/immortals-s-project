@@ -5,7 +5,7 @@ var clothnumberStore = Ext.create('clothnumber.store.ClothNumberStore');
 Ext.define('clothnumber.view.ClothNumberGrid', {
 	extend : 'Ext.grid.GridPanel',
 	alias : 'widget.clothnumberGrid',
-	title : 'Java EE 课程-学生列表',
+	title : '服装统计',
 	store : clothnumberStore,
 	columns : [ {
 		text : 'ID',
@@ -13,22 +13,22 @@ Ext.define('clothnumber.view.ClothNumberGrid', {
 		sortable : true,
 		dataIndex : 'id'
 	}, {
-		text : "学号",
+		text : "种类",
 		width : 120,
 		sortable : true,
 		dataIndex : 'kind'
 	}, {
-		text : "姓名",
+		text : "颜色",
 		width : 80,
 		sortable : true,
 		dataIndex : 'color'
 	}, {
-		text : "性别",
+		text : "尺码",
 		width : 80,
 		sortable : true,
 		dataIndex : 'size'
 	}, {
-		text : " 专业",
+		text : " 序号",
 		width : 80,
 		sortable : true,
 		dataIndex : 'num'
