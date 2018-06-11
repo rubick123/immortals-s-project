@@ -1,6 +1,6 @@
 Ext.require(['Ext.data.*', 'Ext.grid.*']);
 
-Ext.define('customerservicer.CustomerServicerModel', {
+Ext.define('importexportdata.ImportExportDataModel', {
 
 			extend : 'Ext.data.Model',
 			fields : [{
@@ -29,7 +29,7 @@ var pageSize = 20;
 var store = new Ext.data.Store({
 			autoLoad : true,
 			autoSync : true,// 需要同步
-			model : 'customerservicer.CustomerServicerModel',
+			model : 'importexportdata.ImportExportDataModel',
 			proxy : {
 				type : 'rest',
 				url : './.json',
@@ -203,7 +203,7 @@ var importexportdataForm = new Ext.form.FormPanel({
 		})
 
 Ext.application({
-			name : '客服信息',
+			name : '进出口统计信息',
 			launch : function() {
 				Ext.create('Ext.container.Viewport', {
 							layout : 'border',
