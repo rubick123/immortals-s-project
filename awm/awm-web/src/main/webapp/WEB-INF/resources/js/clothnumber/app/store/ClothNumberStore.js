@@ -1,11 +1,11 @@
 var pageSize = 20;
 
-Ext.define('cloth_number.store.UserInfoStore', {
+Ext.define('clothnumber.store.ClothNumberStore', {
 	extend : 'Ext.data.Store',
 	alias : 'widget.clothnumberStore',
 	autoLoad : true,
 	autoSync : true,// 需要同步
-	model : 'clothnumberinfo.model.ClothNumberModel',
+	model : 'clothnumber.model.ClothNumberModel',
 	proxy : {
 		url : server_context + '/clothnumber/.json',
 		type : 'ajax',
@@ -24,4 +24,4 @@ Ext.define('cloth_number.store.UserInfoStore', {
 	},
 	// 每页显示的记录行数
 	pageSize : pageSize
-});
+});	

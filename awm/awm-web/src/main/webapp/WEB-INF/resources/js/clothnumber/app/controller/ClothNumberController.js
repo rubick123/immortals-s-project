@@ -1,9 +1,9 @@
-Ext.define('cloth_number.controller.ClothNumberController', {
+Ext.define('clothnumber.controller.ClothNumberController', {
 	extend : 'Ext.app.Controller',
 	alias : 'widget.clothnumberController',
-	stores : [ 'ClothNumberoStore' ],
+	stores : [ 'ClothNumberStore' ],
 	models : [ 'ClothNumberModel' ],
-	views : [ 'ClothNumberGrid', 'ClothNumberEdit' ],
+	views : [ 'ClothNumberGrid','ClothNumberEdit' ],
 	init : function() {
 		this.control({
 			'clothnumberGrid' : {
