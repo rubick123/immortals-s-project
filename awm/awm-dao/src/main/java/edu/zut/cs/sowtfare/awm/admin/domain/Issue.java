@@ -18,8 +18,6 @@ public class Issue extends BaseEntity {
 	@Column(name="phone")
 	String phone;
 	
-	@Column(name="newsname")
-	String newsname;
 	
 	
 	@Column(name="Email")
@@ -44,13 +42,6 @@ public class Issue extends BaseEntity {
 		this.phone = phone;
 	}
 
-	public String getnewsname() {
-		return newsname;
-	}
-
-	public void setnewsname(String newsname) {
-		this.newsname = newsname;
-	}
 
 	public String getEmail() {
 		return Email;
