@@ -1,6 +1,6 @@
-Ext.define('Forminfo.view.FormInfoEdit', {
+Ext.define('form.view.FormEdit', {
 	extend : 'Ext.window.Window',
-	alias : 'widget.ForminfoEdit',
+	alias : 'widget.formEdit',
 	title : '编辑服装盈利统计信息',
 	layout : 'fit',
 	autoShow : true,
@@ -34,7 +34,7 @@ Ext.define('Forminfo.view.FormInfoEdit', {
 				xtype : 'textfield',
 				name : 'earn',
 				fieldLabel : '盈利'
-			},]
+			}]
 		} ];
 		this.buttons = [ {
 			text : '保存',

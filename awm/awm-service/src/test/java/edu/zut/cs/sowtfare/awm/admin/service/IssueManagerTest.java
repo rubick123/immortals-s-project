@@ -27,8 +27,8 @@ public class IssueManagerTest extends GenericGenerator{
 		for(int i=0;i<100;i++)
 		{
 			Issue u = new Issue();
-			u.setphone("lph");
-			u.setnewsname("boss");
+			u.setphone("18549765485");
+			u.setIssuename("boss");
 			u.setEmail("1780954741@qq.com");		
 			this.IssueManager.save(u);
 		}

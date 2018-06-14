@@ -7,11 +7,11 @@ Ext.define('issue.store.IssueStore', {
 	autoSync : true,// 需要同步
 	model : 'issue.model.IssueModel',
 	proxy : {
-		url : server_context + '/teach/issue/.json',
+		url : server_context + '/issue/.json',
 		type : 'ajax',
 		api : {
-			read : server_context + '/teach/issue/.json',
-			update : server_context + '/teach/issue/.json'
+			read : server_context + '/issue/.json',
+			update : server_context + '/issue/.json'
 		},
 		reader : {
 			type : 'json',

@@ -6,14 +6,19 @@ import javax.persistence.Table;
 
 import edu.zut.cs.sowtfare.awm.base.domain.BaseEntity;
 
-
+/**
+ * Entity:CustomerServicer
+ * @author Fangjun
+ * property:
+ * 			customerservicername
+ * 			email
+ * method:
+ * 		  display() For query testing
+ */
 @Table(name = "T_ADMIN_CUSTOMERSERVICER")
 @Entity
 public class CustomerServicer extends BaseEntity{
 	
-	/**
-	 * 
-	 */
 	private static final long serialVersionUID = -4376674977047164142L;
 
 	@Column(name = "CUSTONERSERVICERNAME")

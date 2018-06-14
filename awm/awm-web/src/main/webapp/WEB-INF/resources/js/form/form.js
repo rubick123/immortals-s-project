@@ -1,8 +1,13 @@
 Ext.require(['Ext.data.*', 'Ext.grid.*']);
 
-Ext.define('student.StudentModel', {
+Ext.define('form.FormModel', {
+
 			extend : 'Ext.data.Model',
 			fields : [{
+						name : 'id',
+						type : 'int',
+						sortable : true
+					}, {
 						name : 'logo',
 						type : 'string',
 						sortable : true
@@ -44,7 +49,7 @@ var pageSize = 20;
 var store = new Ext.data.Store({
 			autoLoad : true,
 			autoSync : true,// 需要同步
-			model : 'Forminfo.FormInfoModel',
+			model : 'form.FormModel',
 			proxy : {
 				type : 'rest',
 				url : './.json',
@@ -116,8 +121,8 @@ var rowEditing = Ext.create('Ext.grid.plugin.RowEditing', {
 			}
 		});
 
-var ForminfoGrid = new Ext.grid.GridPanel({
-			id : 'ForminfoGrid',
+var formGrid = new Ext.grid.GridPanel({
+			id : 'formGrid',
 			plugins : [rowEditing],
 			store : store,
 			region : 'center',
@@ -127,13 +132,22 @@ var ForminfoGrid = new Ext.grid.GridPanel({
 			width : 600,
 			title : '盈利统计表',
 			columns : [{
-						text : '品牌',
+						text : 'ID',
 						width : 50,
 						sortable : true,
-						dataIndex : 'logo'
+						dataIndex : 'id'
+					}, {
+						text : "品牌",
+						width : 120,
+						sortable : true,
+						dataIndex : 'logo',
+						editor : textFieldEditor,
+						field : {
+							xtype : 'textfield'
+						}
 					}, {
 						text : "颜色",
-						width : 120,
+						width : 80,
 						sortable : true,
 						dataIndex : 'color',
 						editor : textFieldEditor,
@@ -142,22 +156,19 @@ var ForminfoGrid = new Ext.grid.GridPanel({
 						}
 					}, {
 						text : "尺寸",
-						width : 80,
+						width : 50,
 						sortable : true,
 						dataIndex : 'size',
-						editor : textFieldEditor,
-						field : {
-							xtype : 'textfield'
-						}
+						editor : textFieldEditor
 					}, {
 						text : "进价",
 						width : 50,
 						sortable : true,
-						dataIndex : 'buyprice',
-						editor : textFieldEditor
+						editor : textFieldEditor,
+						dataIndex : 'buyprice'
 					}, {
 						text : "售价",
-						width : 50,
+						width : 80,
 						sortable : true,
 						editor : textFieldEditor,
 						dataIndex : 'sellprice'
@@ -206,9 +217,9 @@ var ForminfoGrid = new Ext.grid.GridPanel({
 			}
 		});
 
-ForminfoGrid.getSelectionModel().on('selectionchange',
+formGrid.getSelectionModel().on('selectionchange',
 		function(selModel, selections) {
-			ForminfoGrid.down('#delete').setDisabled(selections.length === 0);
+			formGrid.down('#delete').setDisabled(selections.length === 0);
 		});
 
 new Ext.form.NumberField({
@@ -221,14 +232,14 @@ new Ext.form.NumberField({
 
 var clearForm = function() {
 	Ext.Msg.alert('重置', '重置查询表单！');
-	studentForm.getForm().reset();
+	formForm.getForm().reset();
 }
 
 var queryForm = function() {
 	Ext.Msg.alert('查询', '将开始执行查询！');
 }
-var ForminfoForm = new Ext.form.FormPanel({
-			title : '盈利信息查询',
+var formForm = new Ext.form.FormPanel({
+			title : '信息查询',
 			width : 200,
 			height : 200,
 			frame : true,
@@ -248,17 +259,9 @@ var ForminfoForm = new Ext.form.FormPanel({
 						xtype : 'textfield',
 						name : 'size'
 					}, {
-						fieldLabel : "进价",
-						xtype : 'textfield',
-						name : 'sellprice'
-					}, {
 						fieldLabel : "售价",
 						xtype : 'textfield',
 						name : 'sellprice'
-					}, {
-						fieldLabel : "盈利",
-						xtype : 'textfield',
-						name : 'earn'
 					}],
 			buttons : [{
 						xtype : 'button',
@@ -274,11 +277,17 @@ var ForminfoForm = new Ext.form.FormPanel({
 		})
 
 Ext.application({
-			name : '盈利信息',
+			name : '统计信息',
 			launch : function() {
 				Ext.create('Ext.container.Viewport', {
 							layout : 'border',
-							items : [ForminfoForm, ForminfoGrid]
+							items : [formForm, formGrid]
 						});
 			}
 		});
+
+
+ 
+ 
+ 
+

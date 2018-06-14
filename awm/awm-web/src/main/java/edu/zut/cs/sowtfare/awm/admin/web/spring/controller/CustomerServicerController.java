@@ -1,5 +1,14 @@
 package edu.zut.cs.sowtfare.awm.admin.web.spring.controller;
 
+/**
+ * Class: CustomerServicerController
+ * @author Fangjun
+ * property:
+ * 			customerServicerManager
+ * method:
+ * 			index() Specify the url returned
+ * 			setUserManager() Initializing customerServicerManager variable
+ */
 import edu.zut.cs.sowtfare.awm.admin.domain.CustomerServicer;
 import edu.zut.cs.sowtfare.awm.admin.service. CustomerServicerManager;
 import edu.zut.cs.sowtfare.awm.base.web.spring.controller.GenericController;

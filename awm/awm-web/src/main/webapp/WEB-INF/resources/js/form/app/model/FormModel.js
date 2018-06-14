@@ -1,7 +1,11 @@
-Ext.define('Forminfo.model.FormInfoModel', {
+Ext.define('form.model.FormModel', {
 	extend : 'Ext.data.Model',
-	alias : 'widget.ForminfoModel',
+	alias : 'widget.formModel',
 	fields : [ {
+		name : 'id',
+		type : 'int',
+		sortable : true
+	}, {
 		name : 'logo',
 		type : 'string',
 		sortable : true
@@ -25,6 +29,16 @@ Ext.define('Forminfo.model.FormInfoModel', {
 		name : 'earn',
 		type : 'string',
 		sortable : true
-	
+	},{
+		name : 'dateCreated',
+		type : 'date',
+		dateFormat : 'time',
+		sortable : true
+	}, {
+		name : 'dateModified',
+		type : 'date',
+		dateFormat : 'time',
+		sortable : true
 	} ]
+
 });

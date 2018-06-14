@@ -2,15 +2,16 @@ Ext.Loader.setConfig({
 	enabled : true
 });
 Ext.application({
-	name : 'Forminfo',
-	appFolder : server_context + '/resources/js/Forminfo/app',
-	controllers : [ 'FormInfoController' ],
+	name : 'form',
+	appFolder : server_context + '/resources/js/form/app',
+	controllers : [ 'FormController' ],
 	launch : function() {
 		Ext.create('Ext.container.Viewport', {
 			layout : 'fit',
 			items : [ {
-				xtype : 'ForminfoGrid'
+				xtype : 'formGrid'
 			} ]
 		});
 	}
 });
+

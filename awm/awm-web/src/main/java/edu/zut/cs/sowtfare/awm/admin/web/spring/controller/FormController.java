@@ -6,10 +6,11 @@ import edu.zut.cs.sowtfare.awm.base.web.spring.controller.GenericController;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
 
 
 @Controller
-@RequestMapping("/Form")
+@RequestMapping("/form")
 public class FormController extends GenericController<Form, Long, FormManager>{
 	
 	FormManager FormManager;
@@ -20,8 +21,9 @@ public class FormController extends GenericController<Form, Long, FormManager>{
         this.manager = this.FormManager;
     }
 
-    @RequestMapping("/index")
-    public String index() {
-        return "Form/index";
-    }
+	 @RequestMapping(method = RequestMethod.GET, value = "/index.html")
+     public String index() {
+		String result = "/form/index";
+		return result;
+	 }
 }
