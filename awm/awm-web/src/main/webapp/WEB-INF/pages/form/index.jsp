@@ -1,5 +1,5 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
-    pageEncoding="UTF-8"%>
+	pageEncoding="UTF-8"%>
 <%
 	String path = request.getContextPath();
 	String extjsPath = "http://202.196.37.91:8080/ext-4.2.1.883/";
@@ -8,7 +8,7 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<title>盈利统计录</title>
+<title>用户基本信息</title>
 </head>
 <link rel="stylesheet" type="text/css"
 	href="<%=extjsPath%>resources/css/ext-all-neptune.css">
@@ -23,8 +23,7 @@
 	var server_context = basePath;
 </script>
 <script type="text/javascript"
-	src="${pageContext.request.contextPath}/resources/js/Form/app.js"></script>
+	src="${pageContext.request.contextPath}/resources/js/form/app.js"></script>
 <body>
-I am a beautiful girl!
 </body>
 </html>

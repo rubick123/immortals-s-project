@@ -1,12 +1,12 @@
 var pageSize = 20;
 
-var ForminfoStore = Ext.create('Forminfo.store.FormInfoStore');
+var ForminfoStore = Ext.create('form.store.FormStore');
 
-Ext.define('Forminfo.view.FormInfoGrid', {
+Ext.define('form.view.FormGrid', {
 	extend : 'Ext.grid.GridPanel',
-	alias : 'widget.ForminfoGrid',
+	alias : 'widget.formGrid',
 	title : '服装盈利统计信息表',
-	store : ForminfoStore,
+	store : formStore,
 	columns : [ {
 		text : '品牌',
 		width : 50,
@@ -58,7 +58,7 @@ Ext.define('Forminfo.view.FormInfoGrid', {
 
 	bbar : new Ext.PagingToolbar({
 		pageSize : pageSize,// 每页显示的记录值
-		store : ForminfoStore,
+		store : formStore,
 		displayInfo : true,
 		firstTest : '首页',
 		lastText : '尾页',

@@ -1,5 +1,15 @@
 package edu.zut.cs.sowtfare.awm.admin.service.impl;
 
+/**
+ * Class: CustomerServiceManagerImpl
+ * @author Fangjun
+ * property:
+ * 			customerServicerDao
+ * method:
+ * 			setCustomerServicerDao() Initializing customerservicerDao variable
+ * 			findbyCustomerServicername() query by CustomerServicername
+ */
+
 import java.util.List;
 //import javax.transaction.Transactional;
 import org.springframework.beans.factory.annotation.Autowired;

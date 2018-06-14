@@ -1,5 +1,12 @@
 package edu.zut.cs.sowtfare.awm.admin.service;
 
+/**
+ * Interface: CustomerServicerManager
+ * @author Fangjun
+ * method:
+ * 		   findAll() query all
+ * 		   findbyCustomerServicername() query by CustomerServicername
+ */
 import java.util.List;
 
 import edu.zut.cs.sowtfare.awm.admin.domain.CustomerServicer;

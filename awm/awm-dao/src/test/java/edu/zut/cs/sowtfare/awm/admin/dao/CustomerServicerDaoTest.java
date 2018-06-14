@@ -1,5 +1,11 @@
 package edu.zut.cs.sowtfare.awm.admin.dao;
 
+/**
+ * Class: CustomerServicerDaoTest
+ * @author Fangjun
+ * method:
+ * 		  test() Verification code
+ */
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;

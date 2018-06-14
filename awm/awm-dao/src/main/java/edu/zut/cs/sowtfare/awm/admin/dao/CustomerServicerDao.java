@@ -1,5 +1,11 @@
 package edu.zut.cs.sowtfare.awm.admin.dao;
-
+/**
+ * interface: CustomerServicerDao
+ * @author Fangjun
+ * method:
+ * 		  findbyCustomerServicername() for query testing
+ * 		  
+ */
 
 import org.springframework.data.jpa.repository.Query;
 
