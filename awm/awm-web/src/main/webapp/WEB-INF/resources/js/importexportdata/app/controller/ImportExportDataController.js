@@ -3,7 +3,7 @@ Ext.define('importexportdata.controller.ImportExportDataController', {
 	alias : 'widget.importexportdataController',
 	stores : [ 'ImportExportDataStore' ],
 	models : [ 'ImportExportDataModel' ],
-	views : [ 'ImportExportDataGrid', '	ImportExportDataEdit' ],
+	views : [ 'ImportExportDataGrid', 'ImportExportDataEdit' ],
 	init : function() {
 		this.control({
 			'importexportdataGrid' : {
