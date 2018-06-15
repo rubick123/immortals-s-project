@@ -1,6 +1,6 @@
 var pageSize = 20;
 
-var ForminfoStore = Ext.create('form.store.FormStore');
+var formStore = Ext.create('form.store.FormStore');
 
 Ext.define('form.view.FormGrid', {
 	extend : 'Ext.grid.GridPanel',
@@ -8,6 +8,11 @@ Ext.define('form.view.FormGrid', {
 	title : '服装盈利统计信息表',
 	store : formStore,
 	columns : [ {
+		text : 'ID',
+		width : 50,
+		sortable : true,
+		dataIndex : 'id'
+	}, {
 		text : '品牌',
 		width : 50,
 		sortable : true,
