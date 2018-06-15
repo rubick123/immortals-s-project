@@ -10,11 +10,11 @@ Ext.define('issue.model.IssueModel', {
 		type : 'string',
 		sortable : true
 	}, {
-		name : 'Issuemname',
+		name : 'issuename',
 		type : 'string',
 		sortable : true
 	}, {
-		name : 'Email',
+		name : 'email',
 		type : 'string',
 		sortable : true
 	}, {

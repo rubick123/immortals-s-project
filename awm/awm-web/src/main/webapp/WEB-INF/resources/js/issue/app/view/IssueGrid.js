@@ -21,12 +21,12 @@ Ext.define('issue.view.IssueGrid', {
 		text : "商品名",
 		width : 80,
 		sortable : true,
-		dataIndex : 'Issuename'
+		dataIndex : 'issuename'
 	}, {
 		text : "邮箱",
-		width : 80,
+		width : 120,
 		sortable : true,
-		dataIndex : 'Email'
+		dataIndex : 'email'
 	}, {
 		text : "添加时间",
 		width : 150,

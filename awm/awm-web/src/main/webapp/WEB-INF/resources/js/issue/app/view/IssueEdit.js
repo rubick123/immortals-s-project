@@ -16,11 +16,11 @@ Ext.define('issue.view.IssueEdit', {
 				fieldLabel : '电话'
 			}, {
 				xtype : 'textfield',
-				name : 'Issuename',
+				name : 'issuename',
 				fieldLabel : '商品名'
 			}, {
 				xtype : 'textfield',
-				name : 'Email',
+				name : 'email',
 				fieldLabel : '邮箱'
 			} ]
 		} ];
