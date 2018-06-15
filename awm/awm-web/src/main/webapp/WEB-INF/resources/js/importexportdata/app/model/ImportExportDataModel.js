@@ -1,20 +1,12 @@
-Ext.define('issue.model.IssueModel', {
+Ext.define('importexportdata.model.ImportExportDataModel', {
 	extend : 'Ext.data.Model',
-	alias : 'widget.issueModel',
+	alias : 'widget.importexportdataModel',
 	fields : [ {
 		name : 'id',
 		type : 'int',
 		sortable : true
-	}, {
-		name : 'phone',
-		type : 'string',
-		sortable : true
-	}, {
-		name : 'issuename',
-		type : 'string',
-		sortable : true
-	}, {
-		name : 'email',
+	},{
+		name : 'number',
 		type : 'string',
 		sortable : true
 	}, {

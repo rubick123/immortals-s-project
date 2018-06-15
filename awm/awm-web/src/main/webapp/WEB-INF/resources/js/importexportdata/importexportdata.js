@@ -1,25 +1,20 @@
 Ext.require(['Ext.data.*', 'Ext.grid.*']);
 
-Ext.define('issue.IssueModel', {
-
+Ext.define('importexportdata.ImportExportDataModel', {
 			extend : 'Ext.data.Model',
 			fields : [{
 						name : 'id',
 						type : 'int',
 						sortable : true
 					}, {
-						name : 'phone',
-						type : 'string',
-						sortable : true
-					}, {
-						name : 'issuename',
-						type : 'string',
-						sortable : true
-					}, {
 						name : 'email',
 						type : 'string',
 						sortable : true
 					}, {
+						name : 'importexportdataname',
+						type : 'string',
+						sortable : true
+					},{
 						name : 'dateCreated',
 						type : 'date',
 						dateFormat : 'time',
@@ -37,7 +32,7 @@ var pageSize = 20;
 var store = new Ext.data.Store({
 			autoLoad : true,
 			autoSync : true,// 需要同步
-			model : 'issue.IssueModel',
+			model : 'importexportdata.ImportExportDataModel',
 			proxy : {
 				type : 'rest',
 				url : './.json',
@@ -109,8 +104,8 @@ var rowEditing = Ext.create('Ext.grid.plugin.RowEditing', {
 			}
 		});
 
-var issueGrid = new Ext.grid.GridPanel({
-			id : 'issueGrid',
+var importexportdataGrid = new Ext.grid.GridPanel({
+			id : 'importexportdataGrid',
 			plugins : [rowEditing],
 			store : store,
 			region : 'center',
@@ -118,36 +113,30 @@ var issueGrid = new Ext.grid.GridPanel({
 			loadMask : true,
 			stripeRows : true,
 			width : 600,
-			title : '商品信息表',
+			title : '客服信息表',
 			columns : [{
 						text : 'ID',
 						width : 50,
 						sortable : true,
 						dataIndex : 'id'
 					}, {
-						text : "电话",
+						text : "邮箱",
 						width : 120,
 						sortable : true,
-						dataIndex : 'phone',
+						dataIndex : 'email',
 						editor : textFieldEditor,
 						field : {
 							xtype : 'textfield'
 						}
 					}, {
-						text : "商品名",
+						text : "姓名",
 						width : 80,
 						sortable : true,
-						dataIndex : 'issuename',
+						dataIndex : 'importexportdataname',
 						editor : textFieldEditor,
 						field : {
 							xtype : 'textfield'
 						}
-					},{
-						text : "邮箱",
-						width : 80,
-						sortable : true,
-						editor : textFieldEditor,
-						dataIndex : 'email'
 					}, {
 						text : "添加时间",
 						width : 150,
@@ -187,9 +176,9 @@ var issueGrid = new Ext.grid.GridPanel({
 			}
 		});
 
-issueGrid.getSelectionModel().on('selectionchange',
+importexportdataGrid.getSelectionModel().on('selectionchange',
 		function(selModel, selections) {
-			issueGrid.down('#delete').setDisabled(selections.length === 0);
+	importexportdataGrid.down('#delete').setDisabled(selections.length === 0);
 		});
 
 new Ext.form.NumberField({
@@ -202,13 +191,13 @@ new Ext.form.NumberField({
 
 var clearForm = function() {
 	Ext.Msg.alert('重置', '重置查询表单！');
-	issueForm.getForm().reset();
+	importexportdataForm.getForm().reset();
 }
 
 var queryForm = function() {
 	Ext.Msg.alert('查询', '将开始执行查询！');
 }
-var issueForm = new Ext.form.FormPanel({
+var importexportdataForm = new Ext.form.FormPanel({
 			title : '信息查询',
 			width : 200,
 			height : 200,
@@ -217,9 +206,13 @@ var issueForm = new Ext.form.FormPanel({
 			defaultType : 'textfiled',
 			labelWidth : 30,
 			items : [{
-						fieldLabel : "商品名",
+						fieldLabel : "邮箱",
 						xtype : 'textfield',
-						name : 'issuename'
+						name : 'email'
+					}, {
+						fieldLabel : "姓名",
+						xtype : 'textfield',
+						name : 'importexportdataname'
 					}],
 			buttons : [{
 						xtype : 'button',
@@ -235,13 +228,14 @@ var issueForm = new Ext.form.FormPanel({
 		})
 
 Ext.application({
-			name : '商品信息',
+			name : '客服信息',
 			launch : function() {
 				Ext.create('Ext.container.Viewport', {
 							layout : 'border',
-							items : [issueForm, issueGrid]
+							items : [importexportdataForm, importexportdataGrid]
 						});
 			}
 		});
+
 
 

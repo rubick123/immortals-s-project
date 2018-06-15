@@ -1,7 +1,7 @@
-Ext.define('issue.view.IssueEdit', {
+Ext.define('importexportdata.view.ImportExportDataEdit', {
 	extend : 'Ext.window.Window',
-	alias : 'widget.issueEdit',
-	title : '编辑商品相关信息',
+	alias : 'widget.importexportdataEdit',
+	title : '编辑客服相关信息',
 	layout : 'fit',
 	autoShow : true,
 	initComponent : function() {
@@ -10,19 +10,11 @@ Ext.define('issue.view.IssueEdit', {
 			height : 300,
 			width : 300,
 			border : false,
-			items : [ {
+			items : [{
 				xtype : 'textfield',
-				name : 'phone',
-				fieldLabel : '电话'
-			}, {
-				xtype : 'textfield',
-				name : 'issuename',
-				fieldLabel : '商品名'
-			}, {
-				xtype : 'textfield',
-				name : 'email',
-				fieldLabel : '邮箱'
-			} ]
+				name : 'number',
+				fieldLabel : '编号'
+			}]
 		} ];
 		this.buttons = [ {
 			text : '保存',
@@ -35,3 +27,4 @@ Ext.define('issue.view.IssueEdit', {
 		this.callParent(arguments);
 	}
 });
+
