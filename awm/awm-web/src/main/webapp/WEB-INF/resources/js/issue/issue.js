@@ -12,11 +12,11 @@ Ext.define('issue.IssueModel', {
 						type : 'string',
 						sortable : true
 					}, {
-						name : 'Issuename',
+						name : 'issuename',
 						type : 'string',
 						sortable : true
 					}, {
-						name : 'Email',
+						name : 'email',
 						type : 'string',
 						sortable : true
 					}, {
@@ -137,7 +137,7 @@ var issueGrid = new Ext.grid.GridPanel({
 						text : "商品名",
 						width : 80,
 						sortable : true,
-						dataIndex : 'Issuename',
+						dataIndex : 'issuename',
 						editor : textFieldEditor,
 						field : {
 							xtype : 'textfield'
@@ -147,7 +147,7 @@ var issueGrid = new Ext.grid.GridPanel({
 						width : 80,
 						sortable : true,
 						editor : textFieldEditor,
-						dataIndex : 'Email'
+						dataIndex : 'email'
 					}, {
 						text : "添加时间",
 						width : 150,
@@ -219,7 +219,7 @@ var issueForm = new Ext.form.FormPanel({
 			items : [{
 						fieldLabel : "商品名",
 						xtype : 'textfield',
-						name : 'Issuename'
+						name : 'issuename'
 					}],
 			buttons : [{
 						xtype : 'button',

@@ -12,43 +12,43 @@ import edu.zut.cs.sowtfare.awm.base.domain.BaseEntity;
 public class Issue extends BaseEntity {
 	
 	private static final long  serialVersionUID = -4376674977047164142L;
-	@Column(name="Issuename")
-	String Issuename;
+	@Column(name="issuename")
+	String issuename;
 	
 	@Column(name="phone")
 	String phone;
 	
 	
 	
-	@Column(name="Email")
-	String Email;
+	@Column(name="email")
+	String email;
 	
 	
 	
 	public String getIssuename() {
-		return Issuename;
+		return issuename;
 	}
 
-	public void setIssuename(String username) {
-		this.Issuename = username;
+	public void setIssuename(String issuename) {
+		this.issuename = issuename;
 	}
 
 
-	public String getphone() {
+	public String getPhone() {
 		return phone;
 	}
 
-	public void setphone(String phone) {
+	public void setPhone(String phone) {
 		this.phone = phone;
 	}
 
 
 	public String getEmail() {
-		return Email;
+		return email;
 	}
 
-	public void setEmail(String Email) {
-		this.Email = Email;
+	public void setEmail(String email) {
+		this.email = email;
 	}
 
 	public void save(Issue u) {
