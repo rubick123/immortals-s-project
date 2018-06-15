@@ -1,4 +1,4 @@
-Ext.define('form.controller.FormInfController', {
+Ext.define('form.controller.FormController', {
 	extend : 'Ext.app.Controller',
 	alias : 'widget.formController',
 	stores : [ 'FormStore' ],

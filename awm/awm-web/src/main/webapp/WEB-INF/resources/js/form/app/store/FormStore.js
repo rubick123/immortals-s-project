@@ -1,6 +1,6 @@
 var pageSize = 20;
 
-Ext.define('Forminfo.store.FormStore', {
+Ext.define('form.store.FormStore', {
 	extend : 'Ext.data.Store',
 	alias : 'widget.formStore',
 	autoLoad : true,
