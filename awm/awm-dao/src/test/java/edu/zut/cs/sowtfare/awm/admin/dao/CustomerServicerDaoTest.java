@@ -26,12 +26,12 @@ class CustomerServicerDaoTest {
 	void test() {
 		String username = "world";
 		CustomerServicer query = new CustomerServicer();
-		// List<User> result = this.userDao.findOne(null);
+		 //List<User> result = this.userDao.findOne(null);
 
 		CustomerServicer expectedUser = new CustomerServicer();
-		// expectedUser.setUsername(username);
-		// assertEquals(user, expectedUser);
-		// assertEquals(user.getUsername(), expectedUser.getUsername());
+//		 expectedUser.setUsername(username);
+//		 assertEquals(user, expectedUser);
+//		 assertEquals(user.getUsername(), expectedUser.getUsername());
 	}
 
 }
