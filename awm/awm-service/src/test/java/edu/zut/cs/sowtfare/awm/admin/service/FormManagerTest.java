@@ -15,6 +15,11 @@ import edu.zut.cs.sowtfare.awm.base.service.GenericGenerator;
 
 //@RunWith(SpringJUnit4ClassRunner.class)
 //@ContextConfiguration(classes = AdminServiceConfig.class)
+/**
+ * 
+ * @author LGY
+ *
+ */
 public class FormManagerTest extends GenericGenerator{
 
 	@Autowired
