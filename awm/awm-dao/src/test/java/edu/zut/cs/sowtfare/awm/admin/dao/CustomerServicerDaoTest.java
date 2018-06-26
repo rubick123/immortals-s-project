@@ -1,10 +1,8 @@
 package edu.zut.cs.sowtfare.awm.admin.dao;
 
 /**
- * Class: CustomerServicerDaoTest
  * @author Fangjun
- * method:
- * 		  test() Verification code
+ * @Time 2018-6-26 13:21
  */
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -23,8 +21,12 @@ class CustomerServicerDaoTest {
 	CustomerServicerDao customerServicerDao;
 
 	@Test
+	/**
+	 * @param test
+	 * 
+	 */
 	void test() {
-		String username = "world";
+		String customerservicername = "world";
 		CustomerServicer query = new CustomerServicer();
 		 //List<User> result = this.userDao.findOne(null);
 

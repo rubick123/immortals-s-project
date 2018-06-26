@@ -1,13 +1,8 @@
 package edu.zut.cs.sowtfare.awm.admin.service.impl;
 
 /**
- * Class: CustomerServiceManagerImpl
  * @author Fangjun
- * property:
- * 			customerServicerDao
- * method:
- * 			setCustomerServicerDao() Initializing customerservicerDao variable
- * 			findbyCustomerServicername() query by CustomerServicername
+ * @Time 2016-6-26 13:25
  */
 
 import java.util.List;
@@ -32,11 +27,18 @@ public class CustomerServiceManagerImpl extends GenericManagerImpl<CustomerServi
 	CustomerServicerDao customerServicerDao;
 	
 	@Autowired
+	/**
+	 * 
+	 * @param customerServicerDao
+	 */
 	public void setCustomerServicerDao(CustomerServicerDao customerServicerDao) {
 		this.customerServicerDao = customerServicerDao;
 		this.dao = this.customerServicerDao;
 	}
-
+	/**
+	 * @param customerservicername
+	 * @return cs
+	 */
 	@Override
 	public CustomerServicer findbyCustomerServicername (String customerservicername) {
 		CustomerServicer cs = customerServicerDao.findbyCustomerServicername(customerservicername);

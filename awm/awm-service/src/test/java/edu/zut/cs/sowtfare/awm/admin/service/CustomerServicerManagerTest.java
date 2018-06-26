@@ -1,14 +1,8 @@
 package edu.zut.cs.sowtfare.awm.admin.service;
 
 /**
- * Class: CustomerServicerManagerTest
  * @author Fangjun
- * property:
- * 			customerServicerManager
- * method:
- * 			insert_CustomerSevicer() Insert 100 pieces of data to CustomerServicer
- * 			testFindAll() for the findall testing
- * 			testFindbyCustomerServicername() for the find by customerservicername testing
+ * @Time 2018-6-26 13:27
  */
 import static org.junit.Assert.assertEquals;
 

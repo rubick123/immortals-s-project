@@ -7,13 +7,9 @@ import javax.persistence.Table;
 import edu.zut.cs.sowtfare.awm.base.domain.BaseEntity;
 
 /**
- * Entity:CustomerServicer
+ * 
  * @author Fangjun
- * property:
- * 			customerservicername
- * 			email
- * method:
- * 		  display() For query testing
+ * @Time 2018-6-26 13:16
  */
 @Table(name = "T_ADMIN_CUSTOMERSERVICER")
 @Entity
@@ -22,10 +18,10 @@ public class CustomerServicer extends BaseEntity{
 	private static final long serialVersionUID = -4376674977047164142L;
 
 	@Column(name = "CUSTONERSERVICERNAME")
-	String customerservicername;
+	String customerservicername;// the name of customerservicer
 
 	@Column(name = "EMAIL")
-	String email;
+	String email;// the email of customerservicer
 	
 	public String getCustomerservicername() {
 		return customerservicername;

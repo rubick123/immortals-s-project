@@ -3,11 +3,7 @@ package edu.zut.cs.sowtfare.awm.admin.web.spring.controller;
 /**
  * Class: CustomerServicerController
  * @author Fangjun
- * property:
- * 			customerServicerManager
- * method:
- * 			index() Specify the url returned
- * 			setUserManager() Initializing customerServicerManager variable
+ * @Time 2108-6-26 13:34
  */
 import edu.zut.cs.sowtfare.awm.admin.domain.CustomerServicer;
 import edu.zut.cs.sowtfare.awm.admin.service. CustomerServicerManager;
@@ -25,12 +21,20 @@ public class CustomerServicerController extends GenericController<CustomerServic
     CustomerServicerManager customerServicerManager;
     
 	@RequestMapping(method = RequestMethod.GET, value = "/index.html")
+	/**
+	 * 
+	 * @return String
+	 */
 	public String index() {
 		String result = "/customerservicer/index";
 		return result;
 	}
 
     @Autowired
+    /**
+     * 
+     * @param customerServicerManager
+     */
     public void setUserManager(CustomerServicerManager customerServicerManager) {
         this. customerServicerManager = customerServicerManager;
         this.manager = this. customerServicerManager;
