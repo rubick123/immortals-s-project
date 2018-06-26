@@ -4,7 +4,11 @@ import java.util.List;
 
 import edu.zut.cs.sowtfare.awm.admin.domain.Form;
 import edu.zut.cs.sowtfare.awm.base.service.GenericManager;
-
+/**
+ * 
+ * @author LGY
+ *
+ */
 public interface FormManager extends GenericManager<Form, Long> {
 
 	List<Form> findAll();
