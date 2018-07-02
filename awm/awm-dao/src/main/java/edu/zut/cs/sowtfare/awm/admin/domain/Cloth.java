@@ -7,6 +7,12 @@ import javax.persistence.Table;
 import edu.zut.cs.sowtfare.awm.base.domain.BaseEntity;
 @Table (name="Cloth")
 @Entity
+/**
+ * using for entity
+ * @ClassName Cloth
+ * @author ZhangHongQuan
+ * @Time 18/06/27 15:40
+ */
 public class Cloth extends BaseEntity {
 	
 	private static final long  serialVersionUID = -4376674977047164142L;
@@ -25,7 +31,10 @@ public class Cloth extends BaseEntity {
 	
 	@Column(name="price")
 	int price;
-
+/**
+ * @set() get() initialize and return
+ * @return
+ */
 	public String getClothname() {
 		return clothname;
 	}

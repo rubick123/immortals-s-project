@@ -16,12 +16,22 @@ import edu.zut.cs.sowtfare.awm.base.service.GenericGenerator;
 
 //@RunWith(SpringJUnit4ClassRunner.class)
 //@ContextConfiguration(classes = AdminServiceConfig.class)
+/**
+ * @ClassName ClothManagerTest
+ * @author ZhangHongQuan
+ * @time 18/06/27 15:43
+ */
 public class ClothManagerTest extends GenericGenerator{
 
 	@Autowired
 	ClothManager clothManager;
 	
 	@Test
+	/**
+     *insert_Cloth() Insert 100 pieces of data to Cloth
+     *testFindAll() test insert data
+     *testFindbyClothname()  ClothName testing
+	 */
 	public void insert_Cloth()
 	{
 		for(int i=0;i<100;i++)

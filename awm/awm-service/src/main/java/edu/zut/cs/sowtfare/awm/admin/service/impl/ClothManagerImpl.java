@@ -7,7 +7,15 @@ import edu.zut.cs.sowtfare.awm.admin.dao.ClothDao;
 import edu.zut.cs.sowtfare.awm.admin.domain.Cloth;
 import edu.zut.cs.sowtfare.awm.admin.service.ClothManager;
 import edu.zut.cs.sowtfare.awm.base.service.impl.GenericManagerImpl;
-
+/**
+ * Class: ClothImpl
+ * @author ZhangHongQuan
+ * property:clothDao
+ * 			
+ * method:
+ * 			setClothDao() Initialize ClothDao
+ * 			findbyClothname() query by Cloth name
+ */
 @Component
 public class ClothManagerImpl extends GenericManagerImpl<Cloth, Long> implements ClothManager {
 
