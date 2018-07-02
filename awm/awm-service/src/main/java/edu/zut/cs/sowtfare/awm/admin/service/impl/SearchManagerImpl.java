@@ -1,5 +1,8 @@
 package edu.zut.cs.sowtfare.awm.admin.service.impl;
-
+/**
+ * @author LiuHao
+ * @Time 2016-6-27 16:25
+ */
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
@@ -14,11 +17,17 @@ public class SearchManagerImpl extends GenericManagerImpl<Search, Long> implemen
 	SearchDao searchDao;
 
 	@Autowired
+	/**
+	 * 
+	 * @param SearchDao
+	 */
 	public void setSearchDao(SearchDao searchDao) {
 		this.searchDao = searchDao;
 		this.dao = this.searchDao;
 	}
-
+	/**
+	 * @param searchname
+	 */
 	@Override
 	public Search findbySearchname(String searchname) {
 		// TODO Auto-generated method stub

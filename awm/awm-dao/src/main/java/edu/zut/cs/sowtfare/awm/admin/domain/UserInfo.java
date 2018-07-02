@@ -8,7 +8,11 @@ import edu.zut.cs.sowtfare.awm.base.domain.BaseEntity;
 
 @Table(name="userinfo")
 @Entity
-
+/**
+ * This is an entity class for materializing user data
+ * @author ZLK
+ *
+ */
 public class UserInfo extends BaseEntity {
 	
 	private static final long  serialVersionUID = -4376674977047164142L;

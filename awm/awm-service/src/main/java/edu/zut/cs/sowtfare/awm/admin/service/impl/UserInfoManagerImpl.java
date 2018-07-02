@@ -12,7 +12,11 @@ import edu.zut.cs.sowtfare.awm.admin.dao.UserInfoDao;
 import edu.zut.cs.sowtfare.awm.admin.domain.UserInfo;
 import edu.zut.cs.sowtfare.awm.admin.service.UserInfoManager;
 import edu.zut.cs.sowtfare.awm.base.service.impl.GenericManagerImpl;
-
+/**
+ * 
+ * @author ZLK
+ *
+ */
 @Component
 public class UserInfoManagerImpl extends GenericManagerImpl<UserInfo, Long> implements UserInfoManager {
 
