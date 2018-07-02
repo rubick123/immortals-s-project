@@ -14,7 +14,7 @@ Ext.define('userinfo.model.UserInfoModel', {
 		type : 'string',
 		sortable : true
 	}, {
-		name : 'nickname',
+		name : 'address',
 		type : 'string',
 		sortable : true
 	}, {

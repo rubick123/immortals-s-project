@@ -13,9 +13,10 @@ import edu.zut.cs.sowtfare.awm.admin.domain.UserInfo;
 import edu.zut.cs.sowtfare.awm.admin.service.UserInfoManager;
 import edu.zut.cs.sowtfare.awm.base.service.impl.GenericManagerImpl;
 /**
- * 
+ * This is an implementation class for a user entity
+ * @ClassName UserInfoManagerImpl
  * @author ZLK
- *
+ * @Time 18/7/2 16:30
  */
 @Component
 public class UserInfoManagerImpl extends GenericManagerImpl<UserInfo, Long> implements UserInfoManager {
@@ -23,12 +24,22 @@ public class UserInfoManagerImpl extends GenericManagerImpl<UserInfo, Long> impl
 	UserInfoDao userinfoDao;
 
 	@Autowired
+	/**
+	 * Create user entities
+	 * @param userinfoDao
+	 * @Time 18/7/2 16:30
+	 */
 	public void setUserDao(UserInfoDao userinfoDao) {
 		this.userinfoDao = userinfoDao;
 		this.dao = this.userinfoDao;
 	}
 
 	@Override
+	/**
+	 * Match the query
+	 * @return result
+	 * @Time 18/7/2 16:30
+	 */
 	public List<UserInfo> findByUsername(String username) {
 		// 创建查询条件数据对象
 		UserInfo queryObject = new UserInfo();

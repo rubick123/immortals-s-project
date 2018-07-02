@@ -20,8 +20,8 @@ Ext.define('userinfo.view.UserInfoEdit', {
 				fieldLabel : '用户名'
 			}, {
 				xtype : 'textfield',
-				name : 'nickname',
-				fieldLabel : '昵称'
+				name : 'address',
+				fieldLabel : '地址'
 			}, {
 				xtype : 'textfield',
 				name : 'password',

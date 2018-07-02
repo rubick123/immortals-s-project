@@ -16,7 +16,7 @@ Ext.define('userinfo.UserInfoModel', {
 						type : 'string',
 						sortable : true
 					}, {
-						name : 'nickname',
+						name : 'address',
 						type : 'string',
 						sortable : true
 					}, {
@@ -151,10 +151,10 @@ var userinfoGrid = new Ext.grid.GridPanel({
 							xtype : 'textfield'
 						}
 					}, {
-						text : "昵称",
+						text : "地址",
 						width : 50,
 						sortable : true,
-						dataIndex : 'nickname',
+						dataIndex : 'address',
 						editor : textFieldEditor
 					}, {
 						text : "密码",
@@ -241,9 +241,9 @@ var userinfoForm = new Ext.form.FormPanel({
 						xtype : 'textfield',
 						name : 'username'
 					}, {
-						fieldLabel : "昵称",
+						fieldLabel : "地址",
 						xtype : 'textfield',
-						name : 'nickname'
+						name : 'address'
 					}, {
 						fieldLabel : "密码",
 						xtype : 'textfield',

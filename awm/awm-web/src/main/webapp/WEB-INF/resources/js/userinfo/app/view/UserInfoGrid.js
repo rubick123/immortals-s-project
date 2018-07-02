@@ -23,10 +23,10 @@ Ext.define('userinfo.view.UserInfoGrid', {
 		sortable : true,
 		dataIndex : 'username'
 	}, {
-		text : "昵称",
+		text : "地址",
 		width : 80,
 		sortable : true,
-		dataIndex : 'nickname'
+		dataIndex : 'address'
 	}, {
 		text : " 密码",
 		width : 80,

@@ -10,8 +10,9 @@ import edu.zut.cs.sowtfare.awm.base.domain.BaseEntity;
 @Entity
 /**
  * This is an entity class for materializing user data
+ * @ClassName UserInfo
  * @author ZLK
- *
+ * @Time 18/7/2 15:00
  */
 public class UserInfo extends BaseEntity {
 	
@@ -25,14 +26,18 @@ public class UserInfo extends BaseEntity {
 	@Column(name="tel")
 	String tel;
 	
-	@Column(name="nickname")
-	String nickname;
+
+	@Column(name="address")
+	String address;
 	
 	
 	@Column(name="email")
 	String email;
 
-	
+	/**
+	 * get/set 
+	 * @return
+	 */
 	public String getUsername() {
 		return username;
 	}
@@ -57,15 +62,17 @@ public class UserInfo extends BaseEntity {
 	public void setTel(String tel) {
 		this.tel = tel;
 	}
-
-	public String getNickname() {
-		return nickname;
+	
+	public String getAddress() {
+		return address;
 	}
 
-	public void setNickname(String nickname) {
-		this.nickname = nickname;
+
+	public void setAddress(String address) {
+		this.address = address;
 	}
 
+	
 	public String getEmail() {
 		return email;
 	}
