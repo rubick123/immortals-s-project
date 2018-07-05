@@ -9,10 +9,12 @@ import edu.zut.cs.sowtfare.awm.base.domain.BaseEntity;
 @Table(name="Form")
 @Entity
 /**
- * This is an entity class for materializing user data
+ * This is an entity class for materializing Form data
+ * @ClassName Form
  * @author LGY
- *
+ * @Time 18/7/3 14:22
  */
+
 public class Form extends BaseEntity {
 	
 	private static final long  serialVersionUID = -4376674977047164142L;
