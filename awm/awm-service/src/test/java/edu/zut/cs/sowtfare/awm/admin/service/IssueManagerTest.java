@@ -16,12 +16,22 @@ import edu.zut.cs.sowtfare.awm.base.service.GenericGenerator;
 
 //@RunWith(SpringJUnit4ClassRunner.class)
 //@ContextConfiguration(classes = AdminServiceConfig.class)
+/**
+ * @ClassName IssueManagerTest
+ * @author lipenghui
+ * @time 18/06/27 15:52
+ */
 public class IssueManagerTest extends GenericGenerator{
 
 	@Autowired
 	IssueManager IssueManager;
 	
 	@Test
+	/**
+     *insert_Issue() Insert 100 pieces of data to Cloth
+     *testFindAll() test insert data
+     *testFindbyIssuename()  IssueName testing
+	 */
 	public void insert_Issue()
 	{
 		for(int i=0;i<100;i++)
