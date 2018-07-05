@@ -13,7 +13,12 @@ import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 import edu.zut.cs.sowtfare.awm.admin.domain.CustomerServicer;
 import edu.zut.cs.sowtfare.awm.admin.domain.Search;
 import edu.zut.cs.sowtfare.awm.base.service.GenericGenerator;
-
+/**
+ * This is a test class,Used to test the creation and query of entities
+ * @ClassName SearchManagerTest
+ * @author LH
+ * @Time 18/6/29 15:35
+ */
 public class SearchManagerTest extends GenericGenerator{
 
 	@Autowired
