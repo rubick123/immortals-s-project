@@ -10,7 +10,12 @@ import edu.zut.cs.sowtfare.awm.admin.dao.SearchDao;
 import edu.zut.cs.sowtfare.awm.admin.domain.Search;
 import edu.zut.cs.sowtfare.awm.admin.service.SearchManager;
 import edu.zut.cs.sowtfare.awm.base.service.impl.GenericManagerImpl;
-
+/**
+ * This is an implementation class for a user entity
+ * @ClassName SearchManagerImpl
+ * @author LH
+ * @Time 18/6/29 15:30
+ */
 @Component
 public class SearchManagerImpl extends GenericManagerImpl<Search, Long> implements SearchManager {
 
