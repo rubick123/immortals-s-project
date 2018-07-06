@@ -9,6 +9,11 @@ import edu.zut.cs.sowtfare.awm.base.domain.BaseEntity;
 
 @Table(name = "CLOTH_NUMBER")
 @Entity
+/**
+ *
+ * @author liuyice
+ * @Time 18/7/4 14:30
+ */
 public class ClothNumber extends BaseEntity{
 	
 	/**
