@@ -12,10 +12,20 @@ import edu.zut.cs.sowtfare.awm.base.web.spring.controller.GenericController;
 
 @Controller
 @RequestMapping("/issue")
+/**
+ * This is an inheritance class ,using for initialization and add method.
+ * @ClassName  IssueController
+ * @author lipenghui
+ * @Time 2018/07/03
+ */
 public class IssueController extends GenericController<Issue, Long, IssueManager> {
 	IssueManager issuemanager;
 
 	@Autowired
+	/**
+	 * method set() initialization index() return URL
+	 * @param issueManager
+	 */
 	public void setIssueManager(IssueManager issueManager) {
 		this.issuemanager = issueManager;
 		this.manager = this.issuemanager;

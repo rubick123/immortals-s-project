@@ -8,7 +8,12 @@ import edu.zut.cs.sowtfare.awm.base.domain.BaseEntity;
 
 @Table(name="issue")
 @Entity
-
+/**
+ * using for entity
+ * @ClassName Issue
+ * @author lipenghui
+ * @Time 18/7/2 15:00
+ */
 public class Issue extends BaseEntity {
 	
 	private static final long  serialVersionUID = -4376674977047164142L;
@@ -23,6 +28,10 @@ public class Issue extends BaseEntity {
 	@Column(name="email")
 	String email;
 	
+	/**
+	 * @set() 
+	 * @return
+	 */
 	
 	
 	public String getIssuename() {

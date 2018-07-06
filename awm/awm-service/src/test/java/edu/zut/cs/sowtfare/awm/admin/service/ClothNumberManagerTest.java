@@ -9,8 +9,11 @@ import org.springframework.beans.factory.annotation.Autowired;
 import edu.zut.cs.sowtfare.awm.admin.domain.ClothNumber;
 import edu.zut.cs.sowtfare.awm.base.service.GenericGenerator;
 
-//@RunWith(SpringJUnit4ClassRunner.class)
-//@ContextConfiguration(classes = AdminServiceConfig.class)
+/**
+ * @ClassName ClothNumberManagerTest
+ * @author liuyice
+ * @Time 18/7/4 15:05
+ */
 public class ClothNumberManagerTest extends GenericGenerator{
 
 	@Autowired
