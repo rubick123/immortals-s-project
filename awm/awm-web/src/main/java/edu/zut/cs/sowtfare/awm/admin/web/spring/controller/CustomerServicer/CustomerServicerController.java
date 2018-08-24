@@ -1,4 +1,4 @@
-package edu.zut.cs.sowtfare.awm.admin.web.spring.controller;
+package edu.zut.cs.sowtfare.awm.admin.web.spring.controller.CustomerServicer;
 
 /**
  * Class: CustomerServicerController
