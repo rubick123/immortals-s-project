@@ -1,0 +1,94 @@
+@charset "UTF-8";
+*{
+	margin:0;
+	padding:0;
+}
+
+body{
+	background:#FFF;	
+}
+
+.content{
+	width:1000px;
+	height:400px;
+	margin:50px auto;	
+}
+
+.content .box{
+	width:205px;
+	height:220px;
+	float:left;
+	margin:0 60px;
+}
+
+.box-mission .icon{
+	width:200px;
+	height:200px;
+	display:block;
+	background: url(./)no-repeat;
+	margin:0 auto;
+}
+
+.box-play .icon{
+	width:174px;
+	height:155px;
+	display:block;
+	background: url(./mission.png)no-repeat;
+	margin:0 auto;
+	transition:all 0.2s;
+	-webkit-transition:all 0.2s;
+	-o-transition:all 0.2s;
+	-moz-transition:all 0.2s;
+}
+
+.box-play .icon:hover{
+	transform:scale(1.2)rotate(360deg);
+    -webkit-transform:scale(1.2)rotate(360deg);
+	-o-transform:scale(1.2)rotate(360deg);
+	-moz-transform:scale(1.2)rotate(360deg);
+}
+
+.box-touch .icon{
+	width:174px;
+	height:155px;
+	display:block;
+	background: url(./)no-repeat;
+	margin:0 auto;
+}
+
+.box .button:hover{
+	background-position:140px center;
+	border:2px solid rgba(255,255,255,1);
+}
+
+.box .line{
+	background-color:#FFF;
+}
+
+    #box{
+        width: 380px;
+        margin: 30px auto;
+        font-family: 'Microsoft YaHei';
+        font-size: 14px;
+    }
+    input{
+        width: 260px;
+        border: 1px solid #e2e2e2;
+        height: 32px;
+        float: left;
+        background-image: url(search.jpg);
+        background-repeat: no-repeat;
+        background-size: 25px;
+        background-position:5px center;
+        padding:0 0 0 40px;
+    }
+    #search{
+        width: 78px;
+        height: 32px;
+        float: right;
+        background: black;
+        color: white;
+        text-align: center;
+        line-height: 32px;
+        cursor: pointer;
+    }
